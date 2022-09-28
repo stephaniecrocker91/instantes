@@ -1,0 +1,17 @@
+.Header {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 0;
+  }
+
+.Link {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: auto;
+    color: white;
+  }

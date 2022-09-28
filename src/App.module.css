@@ -6,3 +6,19 @@
 .Main {
     margin-top: 20vh;
 }
+
+.Content {
+    padding: 10px;
+    border-radius: 20px;
+    } 
+
+.Blue {
+        background-color:#68BBE5;
+    }
+
+.Pink {
+        background-color:#E2008A;
+    } 
+
+
+

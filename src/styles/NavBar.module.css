@@ -10,7 +10,7 @@
 .NavLink:hover {
     cursor: pointer!important;
     transition: color ease-in-out 0.3s!important;
-    color: #E2008A!important;
+    color: #68BBE5!important;
     text-decoration: none;
 } 
 
@@ -35,5 +35,5 @@ i {
 }
 
 .Active {
-    color: #68BBE5!important;
+    color: #E2008A!important;
 }
