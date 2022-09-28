@@ -11,10 +11,11 @@
     cursor: pointer!important;
     transition: color ease-in-out 0.3s!important;
     color: #E2008A!important;
+    text-decoration: none;
 } 
 
 i {
-    margin-right: 5px;
+    margin-right: 0.5rem;
     font-size: 1.6rem;
 }
 /* i:hover {
@@ -30,4 +31,9 @@ i {
 
 .NavLink {
     color: white!important;
+    margin-right: 1rem;
+}
+
+.Active {
+    color: #68BBE5!important;
 }
