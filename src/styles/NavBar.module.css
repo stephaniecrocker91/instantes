@@ -6,27 +6,28 @@
     color: #68BBE5;
     font-size: 4rem;
 }
-.NavLink {
-    color: white!important;
-}
 
 .NavLink:hover {
     cursor: pointer!important;
     transition: color ease-in-out 0.3s!important;
     color: #E2008A!important;
-}
+} 
 
 i {
     margin-right: 5px;
     font-size: 1.6rem;
 }
-i:hover {
+/* i:hover {
     cursor: pointer;
     transition: color ease-in-out 0.3s;
     color: #E2008A;
-    }
+    } */
 
 
 .NavBar{
         background-color: black;
     }
+
+.NavLink {
+    color: white!important;
+}
