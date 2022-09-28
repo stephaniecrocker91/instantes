@@ -1,5 +1,17 @@
 .Brand {
-    font-family: 'Caveat', cursive;
-    color: #7c7c7d!important;
-    font-size: 70px;
+    color: #E2008A!important;
+    font-size: 4rem;
 }
+.Icon {
+    color: #68BBE5;
+    font-size: 4rem;
+}
+.WhiteFont {
+    color: white!important;
+}
+
+i {
+    margin-right: 5px;
+    font-size: 1.6rem;
+}
+
