@@ -13,9 +13,26 @@ const SignUpForm = () => {
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} ${appStyles.Pink} p-4 `}>
           <h1 className={styles.Header}>Sign up</h1>
+          <Form>
+            <Form.Group controlId="username">
+              <Form.Label className="d-none">Username</Form.Label>
+              <Form.Control type="text" placeholder="username" name="username" />
+            </Form.Group>
+          
+            <Form.Group controlId="password1">
+              <Form.Label className="d-none">Password</Form.Label>
+              <Form.Control type="password" placeholder="password" name="password1" />
+            </Form.Group>
 
-            {/* add your form here */}
+            <Form.Group controlId="password2">
+              <Form.Label className="d-none">Password</Form.Label>
+              <Form.Control type="password" placeholder="confirm password" name="password2" />
+            </Form.Group>
 
+            <Button variant="primary" type="submit">
+            Submit
+            </Button>
+          </Form>
         </Container>
         <Container className={`mt-3 ${appStyles.Content} ${appStyles.Blue}`}>
           <Link className={styles.Link} to="/signin">
