@@ -1,0 +1,18 @@
+.Button {
+    font-size: 1rem;
+    align-self: center;
+    border-radius: 70px;
+    border-color: white;
+    background-color: #4E53A5;
+    padding: 5px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 75px;
+    color: white;
+    text-transform: uppercase;
+    }
+
+.Wide {
+        padding: 10px 50px;
+        width: 100%;
+        }
