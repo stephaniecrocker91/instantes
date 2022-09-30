@@ -27,14 +27,16 @@ return (
                         <Form.Label className="d-none">Username</Form.Label>
                         <Form.Control 
                             type="text" 
-                            placeholder="username" 
+                            placeholder="username"
+                            className={styles.Input}
                             name="username"  />
                     </Form.Group>
                     <Form.Group controlId="password">
                         <Form.Label className="d-none">Password</Form.Label>
                         <Form.Control 
                             type="password" 
-                            placeholder="password" 
+                            placeholder="password"
+                            className={styles.Input} 
                             name="password" />
                     </Form.Group>
                     <Button type="submit" className={`${btnStyles.Button} ${btnStyles.Wide}`}>

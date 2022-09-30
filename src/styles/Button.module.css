@@ -16,3 +16,18 @@
         padding: 10px 50px;
         width: 100%;
         }
+
+.Button:hover {
+        opacity: 0.8;
+        background-color: #4E53A5;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+.Button:hover:active {
+        background-color: #2142b2 !important;
+    }
+
+/* .Button:active {
+        background-color: #2142b2 !important;
+    } */
