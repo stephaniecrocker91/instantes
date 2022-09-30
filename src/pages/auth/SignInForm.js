@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
 
-import { Link, useHistory  } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -22,6 +22,8 @@ function SignInForm() {
         password: "",
     });
     const { username, password } = signInData;
+
+    const [errors, setErrors] = useState({});
 
     const history = useHistory();
 
@@ -37,6 +39,7 @@ function SignInForm() {
             await axios.post("/dj-rest-auth/login/", signInData);
             history.push("/");
         } catch (err) {
+            setErrors(err.response?.data);
         }
     };
 return (
@@ -55,6 +58,11 @@ return (
                             value={username} 
                             onChange={handleChange} />
                     </Form.Group>
+                    {errors.username?.map((message, idx) => (
+                        <Alert variant="warning" key={idx}>
+                            {message}
+                        </Alert>
+                    ))}
                     <Form.Group controlId="password">
                         <Form.Label className="d-none">Password</Form.Label>
                         <Form.Control 
@@ -65,9 +73,19 @@ return (
                             value={password} 
                             onChange={handleChange} />
                     </Form.Group>
+                    {errors.password?.map((message, idx) => (
+                        <Alert variant="warning" key={idx}>
+                            {message}
+                        </Alert>
+                    ))}
                     <Button type="submit" className={`${btnStyles.Button} ${btnStyles.Wide}`}>
                         Sign In
                     </Button>
+                    {errors.non_field_errors?.map((message, idx) => (
+                        <Alert key={idx} variant="warning" className="mt-3">
+                            {message}
+                        </Alert>
+                    ))}
                 </Form>
 
             </Container>

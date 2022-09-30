@@ -91,7 +91,7 @@ const SignUpForm = () => {
                 onChange={handleChange} />
             </Form.Group>
 
-            {errors.username?.map((message, idx) => (
+            {errors.password2?.map((message, idx) => (
               <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
