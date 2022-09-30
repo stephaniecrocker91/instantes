@@ -20,9 +20,27 @@ function SignInForm() {
 return (
     <Row className={styles.Row}>
         <Col className="my-auto p-0 p-md-2" md={6}>
-            <Container className={`${appStyles.Content} p-4 `}>
-                <h1 className={styles.Header}>sign in</h1>
-            {/* Add your form here */}
+            <Container className={`${appStyles.Content} ${appStyles.Pink} p-4 `}>
+                <h1 className={styles.Header}>Sign in</h1>
+                <Form>
+                    <Form.Group controlId="username">
+                        <Form.Label className="d-none">Username</Form.Label>
+                        <Form.Control 
+                            type="text" 
+                            placeholder="username" 
+                            name="username"  />
+                    </Form.Group>
+                    <Form.Group controlId="password">
+                        <Form.Label className="d-none">Password</Form.Label>
+                        <Form.Control 
+                            type="password" 
+                            placeholder="password" 
+                            name="password" />
+                    </Form.Group>
+                    <Button type="submit" className={`${btnStyles.Button} ${btnStyles.Wide}`}>
+                        Sign In
+                    </Button>
+                </Form>
 
             </Container>
             <Container className={`mt-3 ${appStyles.Content}`}>
