@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios"
 
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
@@ -14,9 +15,20 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 
-function SignInForm() {
-//   Add your component logic here
 
+function SignInForm() { 
+    const [signInData, setSignInData] = useState({
+        username: "",
+        password: "",
+    });
+    const { username, password } = signInData;
+
+    const handleChange = (event) => {
+        setSignInData({
+            ...signInData,
+            [event.target.name]: event.target.value,
+            });
+        };
 return (
     <Row className={styles.Row}>
         <Col className="my-auto p-0 p-md-2" md={6}>
@@ -29,7 +41,9 @@ return (
                             type="text" 
                             placeholder="username"
                             className={styles.Input}
-                            name="username"  />
+                            name="username"
+                            value={username} 
+                            onChange={handleChange} />
                     </Form.Group>
                     <Form.Group controlId="password">
                         <Form.Label className="d-none">Password</Form.Label>
@@ -37,7 +51,9 @@ return (
                             type="password" 
                             placeholder="password"
                             className={styles.Input} 
-                            name="password" />
+                            name="password"
+                            value={password} 
+                            onChange={handleChange} />
                     </Form.Group>
                     <Button type="submit" className={`${btnStyles.Button} ${btnStyles.Wide}`}>
                         Sign In
