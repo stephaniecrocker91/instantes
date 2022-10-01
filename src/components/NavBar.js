@@ -8,7 +8,55 @@ import { useCurrentUser } from "../context/CurrentUserContext";
 const NavBar = () => {
     
     const currentUser = useCurrentUser();
-    const loggedInIcons = <><div className={styles.NavLink}  >{currentUser?.username}</div></>
+
+    const addPostIcon = (
+        <NavLink
+            className={styles.NavLink}
+            activeClassName={styles.Active}
+            to="/posts/create"
+            >
+            <i className="far fa-plus-square"></i>Add post
+            </NavLink>
+        );
+
+        const loggedInIcons = (
+            <>
+                <NavLink
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    to="/feed"
+                >
+                    <i className="fas fa-stream"></i>Feed
+                </NavLink>
+
+                <NavLink
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    to="/liked"
+                >
+                    <i className="fas fa-heart"></i>Liked
+                </NavLink>
+
+                <NavLink
+                    className={styles.NavLink}
+                    activeClassName={styles.Active}
+                    to="/liked"
+                >
+                    <i className="fas fa-bookmark"></i>Favourite
+                </NavLink>
+
+                <NavLink className={styles.NavLink} to="/" >
+                    <i className="fas fa-sign-out-alt"></i>Sign out
+                </NavLink>
+                <NavLink
+                    className={styles.NavLink}
+                    to={`/profiles/${currentUser?.profile_id}`}
+                >
+                    
+                </NavLink>
+                </>
+            );
+    
     const loggedOutIcons = (
         <>
             <NavLink 
@@ -34,6 +82,7 @@ const NavBar = () => {
                 <NavLink to="/">
                     <Navbar.Brand className={styles.Brand} href="#home">Instant<span className={styles.Icon}>es</span></Navbar.Brand>
                 </NavLink>
+                {currentUser && addPostIcon}
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
