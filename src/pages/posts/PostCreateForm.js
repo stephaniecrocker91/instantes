@@ -20,21 +20,27 @@ function PostCreateForm() {
 
     const textFields = (
         <div className="text-center">
-        {/* Add your form fields here */}
+            <Form.Group controlId="title">
+                <Form.Label>Title</Form.Label>
+                <Form.Control type="text" placeholder="" name="title" />
+            </Form.Group>
 
+            <Form.Group controlId="content">
+                <Form.Label>Content</Form.Label>
+                <Form.Control type="textarea" placeholder="" rows={7} name="content" />
+            </Form.Group> 
         
-        
-        <Button
-            className={`${btnStyles.Button} ${btnStyles.Blue}`}
-            onClick={() => {}}
-        >
-            cancel
-        </Button>
-        <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-            create
-        </Button>
-        </div>
-    );
+            <Button
+                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                onClick={() => {}}
+            >
+                cancel
+            </Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+                create
+            </Button>
+            </div>
+        );
 
     return (
         <Form>
