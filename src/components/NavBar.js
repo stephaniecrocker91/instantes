@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import styles from "../styles/NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import Avatar from "./Avatar";
 import { useCurrentUser, useSetCurrentUser } from "../context/CurrentUserContext";
-
+import axios from "axios";
 
 const NavBar = () => {
     
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
+
+    const [expanded, setExpanded] =useState(false)
 
     const handleSignOut = async () => {
         try {
@@ -57,7 +59,7 @@ const NavBar = () => {
                 </NavLink>
 
                 <NavLink className={styles.NavLink} to="/" >
-                    <i className="fas fa-sign-out-alt"></i>Sign out
+                    <i className="fas fa-sign-out-alt" onClick={handleSignOut}></i>Sign out
                 </NavLink>
                 <NavLink
                     className={styles.NavLink}
@@ -88,13 +90,15 @@ const NavBar = () => {
     )
 
     return (
-        <Navbar className={styles.NavBar} expand="md" fixed="top" variant="dark">
+        <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
             <Container>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.Brand} href="#home">Instant<span className={styles.Icon}>es</span></Navbar.Brand>
                 </NavLink>
                 {currentUser && addPostIcon}
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Toggle 
+                onclick={() => setExpanded(!expanded)}
+                aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <NavLink 
