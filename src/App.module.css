@@ -10,7 +10,12 @@
 .Content {
     padding: 10px;
     border-radius: 20px;
-    } 
+    }   
+
+.Boxed {
+    border: 1px solid #dadadf!important;
+    border-radius: 2px;
+} 
 
 .Blue {
         background-color:#68BBE5;

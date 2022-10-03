@@ -40,7 +40,7 @@ function PostCreateForm() {
         <Row>
             <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
             <Container
-                className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+                className={`${appStyles.Content} ${styles.Container} ${appStyles.Boxed} d-flex flex-column justify-content-center`}
             >
                 <Form.Group className="text-center">
                 
