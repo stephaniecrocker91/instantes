@@ -11,20 +11,20 @@ const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
-    const [expanded, setExpanded] =useState(false)
-    // const ref = useRef(null)
+    const [expanded, setExpanded] = useState(false)
+    const ref = useRef(null)
     
-    // useEffect(() => {
-    //     const handleClickOutside = (event) => {
-    //         if (ref.current && !ref.current.contains(event.target)){
-    //             setExpanded(false)
-    //         }
-    //     }
-    //     document.addEventListener('mouseup', handleClickOutside)
-    //     return () => {
-    //         document.removeEventListener('mouseup', handleClickOutside)
-    //     };
-    // }, [ref]);
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (ref.current && !ref.current.contains(event.target)){
+                setExpanded(false)
+            }
+        }
+        document.addEventListener('mouseup', handleClickOutside)
+        return () => {
+            document.removeEventListener('mouseup', handleClickOutside)
+        }
+    }, [ref]);
 
     const handleSignOut = async () => {
         try {
@@ -103,15 +103,15 @@ const NavBar = () => {
     )
 
     return (
-        <Navbar expande={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
+        <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
             <Container>
                 <NavLink to="/">
                     <Navbar.Brand className={styles.Brand} href="#home">Instant<span className={styles.Icon}>es</span></Navbar.Brand>
                 </NavLink>
                 {currentUser && addPostIcon}
                 <Navbar.Toggle 
-                // ref={ref}
-                onclick={() => setExpanded(!expanded)}
+                ref={ref}
+                onClick={() => setExpanded(!expanded)}
                 aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
