@@ -24,6 +24,15 @@
 .Pink {
         background-color:#E2008A;
     } 
+.Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+    }
+
+.Hidden {
+    display: none;
+}
 
 
 
