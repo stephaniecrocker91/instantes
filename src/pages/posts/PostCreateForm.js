@@ -17,17 +17,42 @@ function PostCreateForm() {
 
     const [errors, setErrors] = useState({});
 
+    const [postData, setPostData] = useState({
+        title:"",
+        content:"",
+        image:"",
+    });
+
+    const {title, content, image} = postData;
+
+    const handleChange = (event) => {
+        setPostData({
+            ...postData,
+            [event.target.name]: event.target.value,
+        });
+    };
+
 
     const textFields = (
         <div className="text-center">
             <Form.Group controlId="title">
                 <Form.Label>Title</Form.Label>
-                <Form.Control type="text" placeholder="" name="title" />
+                <Form.Control 
+                    type="text" 
+                    placeholder="" 
+                    name="title"
+                    value={title}
+                    onChange={handleChange} />
             </Form.Group>
 
             <Form.Group controlId="content">
                 <Form.Label>Content</Form.Label>
-                <Form.Control type="textarea" placeholder="" rows={7} name="content" />
+                <Form.Control 
+                    type="textarea" 
+                    placeholder="" 
+                    rows={7} name="content"
+                    value={content}
+                    onChange={handleChange}  />
             </Form.Group> 
         
             <Button
