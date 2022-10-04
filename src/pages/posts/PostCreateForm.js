@@ -32,6 +32,15 @@ function PostCreateForm() {
         });
     };
 
+    const handleChangeImage = (event) => {
+        if (event.target.files.length) {
+            URL.revokeObjectURL(image);
+            setPostData({
+                ...postData,
+                image: URL.createObjectURL(event.target.files[0]),
+            });
+            }
+        };
 
     const textFields = (
         <div className="text-center">
@@ -82,7 +91,11 @@ function PostCreateForm() {
                     >
                     <Asset src={Upload} message="Click or tap here to upload your image!" />
                     </Form.Label>
-
+                    <Form.File
+                        id="image-upload"
+                        accept="image/*"
+                        onChange={handleChangeImage}
+                    />
                 </Form.Group>
                 <div className="d-md-none">{textFields}</div>
             </Container>
