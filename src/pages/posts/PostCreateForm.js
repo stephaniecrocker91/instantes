@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -79,6 +80,11 @@ function PostCreateForm() {
                     value={title}
                     onChange={handleChange} />
             </Form.Group>
+            {errors.title?.map((message, idx) => (
+                        <Alert key={idx} variant="warning" className="mt-3">
+                            {message}
+                        </Alert>
+                    ))}
 
             <Form.Group controlId="content">
                 <Form.Label>Content</Form.Label>
@@ -89,6 +95,11 @@ function PostCreateForm() {
                     value={content}
                     onChange={handleChange}  />
             </Form.Group> 
+            {errors.content?.map((message, idx) => (
+                        <Alert key={idx} variant="warning" className="mt-3">
+                            {message}
+                        </Alert>
+                    ))}
         
             <Button
                 className={`${btnStyles.Button} ${btnStyles.Blue}`}
@@ -143,6 +154,11 @@ function PostCreateForm() {
                                 
                             />
                         </Form.Group>
+                        {errors.image?.map((message, idx) => (
+                        <Alert key={idx} variant="warning" className="mt-3">
+                            {message}
+                        </Alert>
+                    ))}
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>
