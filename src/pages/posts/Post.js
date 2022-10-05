@@ -89,6 +89,7 @@ const Post = (props) => {
                         >
                         <i className="far fa-heart" />
                         </OverlayTrigger>
+                        
                     ) : like_id ? (
                         <span onClick={handleUnlike}>
                         <i className={`fas fa-heart ${styles.Heart}`} />
@@ -105,6 +106,32 @@ const Post = (props) => {
                         <i className="far fa-heart" />
                         </OverlayTrigger>
                     )}
+
+{is_owner ? (
+                        <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
+                        >
+                        <i className="far fa-bookmark" />
+                        </OverlayTrigger>
+                        
+                    ) : bookmark_id ? (
+                        <span>
+                        <i className={`fas fa-bookmark ${styles.Heart}`} />
+                        </span>
+                    ) : currentUser ? (
+                        <span>
+                        <i className={`far fa-bookmark ${styles.HeartOutline}`} />
+                        </span>
+                    ) : (
+                        <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
+                        >
+                        <i className="far fa-bookmark" />
+                        </OverlayTrigger>
+                    )}
+
                     {likes_count}
                     <Link to={`/posts/${id}`}>
                         <i className="far fa-comments" />
