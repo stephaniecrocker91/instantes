@@ -94,7 +94,7 @@ const NavBar = () => {
         <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
             <Container>
                 <NavLink to="/">
-                    <Navbar.Brand className={styles.Brand} href="#home">Instant<span className={styles.Icon}>es</span></Navbar.Brand>
+                    <Navbar.Brand className={styles.Brand} href="#home">Instantes</Navbar.Brand>
                 </NavLink>
                 {currentUser && addPostIcon}
                 <Navbar.Toggle 

@@ -1,17 +1,15 @@
 .Brand {
-    color: #E2008A!important;
     font-size: 4rem;
 }
 .Icon {
-    color: #68BBE5;
     font-size: 4rem;
 }
 
 .NavLink:hover {
     cursor: pointer!important;
     transition: color ease-in-out 0.3s!important;
-    color: #68BBE5!important;
-    text-decoration: none;
+    opacity: 0.8;
+    text-decoration: underline;
 } 
 
 i {
@@ -26,14 +24,17 @@ i {
 
 
 .NavBar{
-        background-color: black;
+    background-color: #5b5b5b;
     }
 
 .NavLink {
-    color: white!important;
+    color: whitesmoke!important;
+    text-transform: uppercase;
     margin-right: 1rem;
 }
 
 .Active {
-    color: #E2008A!important;
+    font-size: x-large;
+    font-weight: 600;
+    text-decoration: underline;
 }
