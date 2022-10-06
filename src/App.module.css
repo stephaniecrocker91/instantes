@@ -18,12 +18,12 @@
     border-radius: 2px;
 } 
 
-.Blue {
-        background-color:#68BBE5;
+.Grey {
+    background-color:#5b5b5b;
     }
 
-.Pink {
-        background-color:#E2008A;
+.DarkGrey {
+        background-color:#2c2b2b;
     } 
 .Image {
     max-height: 40vh;
