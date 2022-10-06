@@ -11,6 +11,11 @@ import styles from "../../styles/PostsPage.module.css";
 function PostsPage() {
   
   return (
+    function PostsPage({ message, filter = "" }) {
+      const [posts, setPosts] = useState({ results: [] });
+      const [hasLoaded, setHasLoaded] = useState(false);
+      const { pathname } = useLocation();
+      
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>

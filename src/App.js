@@ -11,6 +11,9 @@ import PostsPage from './pages/posts/PostsPage';
 
 
 function App() {
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
+
   return (
         <div className={styles.App}>
           <NavBar />
@@ -24,6 +27,26 @@ function App() {
                       message="Oops, no results found! Please adjust your search word." />
                     )} 
                 />
+                <Route
+                  exact
+                  path="/feed"
+                  render={() => (
+                    <PostsPage
+                      message="Oh no! No results found. Please adjust the search keyword or follow a user."
+                      filter={`owner__followed__owner__profile=${profile_id}&`}
+                    />
+                  )}
+                />
+                <Route
+                    exact
+                    path="/liked"
+                    render={() => (
+                      <PostsPage
+                        message="Oops! No results found. Adjust the search keyword or like a post."
+                        filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                      />
+                    )}
+                  />
                 <Route exact path="/signin" render={() => <SignInForm />} />
                 <Route exact path="/signup" render={() => <SignUpForm />} />
                 <Route exact path="/posts/create" render={() => <PostCreateForm />} />
