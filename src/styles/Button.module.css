@@ -3,7 +3,7 @@
     align-self: center;
     border-radius: 70px;
     border-color: white;
-    background-color: #4E53A5;
+    background-color: #217e8f;
     padding: 5px 10px;
     margin-left: 2px;
     margin-right: 2px;
@@ -19,15 +19,15 @@
 
 .Button:hover {
         opacity: 0.8;
-        background-color: #4E53A5;
+        background-color: #1d6b79;
         border-color: transparent;
         cursor: pointer;
     }
 
 .Button:hover:active {
-        background-color: #2142b2 !important;
+        background-color: #2ba0b4 !important;
     }
 
 /* .Button:active {
-        background-color: #2142b2 !important;
+        background-color: #2ba0b4 !important;
     } */
