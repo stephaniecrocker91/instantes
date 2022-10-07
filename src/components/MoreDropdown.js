@@ -15,7 +15,7 @@ const CustomToggle = React.forwardRef(({onClick }, ref) => (
         />
     ));
 
-export const MoreDropdown = () => {
+export const MoreDropdown = ({handleEdit}) => {
     return (
     <Dropdown className="ml-auto" drop="left">
     <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
@@ -27,7 +27,7 @@ export const MoreDropdown = () => {
     >
         <Dropdown.Item 
         className={styles.DropdownItem}
-        onClick={()=>{}}
+        onClick={handleEdit}
         aria-label="edit"
         >
             <i className="fas fa-edit" />
