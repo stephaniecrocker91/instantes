@@ -31,9 +31,14 @@ function PostsPage({ message, filter = "" }) {
         console.log(err);
       }
     };
-  
     setHasLoaded(false);
-    fetchPosts();
+    const timer = setTimeout(() => {
+      fetchPosts();
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [filter, query, pathname]);
 
   return (
