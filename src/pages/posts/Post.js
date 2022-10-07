@@ -124,11 +124,11 @@ const Post = (props) => {
                         
                     ) : like_id ? (
                         <span onClick={handleUnlike}>
-                        <i className={`fas fa-heart ${styles.Heart}`} />
+                        <i className={`fas fa-heart ${styles.Icon}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleLike}>
-                        <i className={`far fa-heart ${styles.HeartOutline}`} />
+                        <i className={`far fa-heart ${styles.IconOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger
@@ -138,8 +138,8 @@ const Post = (props) => {
                         <i className="far fa-heart" />
                         </OverlayTrigger>
                     )}
-
-{is_owner ? (
+                    {likes_count}
+                    {is_owner ? (
                         <OverlayTrigger
                         placement="top"
                         overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
@@ -149,11 +149,11 @@ const Post = (props) => {
                         
                     ) : bookmark_id ? (
                         <span onClick={handleUnbookmark}>
-                        <i className={`fas fa-bookmark ${styles.Heart}`} />
+                        <i className={`fas fa-bookmark ${styles.Icon}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleBookmark}>
-                        <i className={`far fa-bookmark ${styles.HeartOutline}`} />
+                        <i className={`far fa-bookmark ${styles.IconOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger
@@ -164,9 +164,9 @@ const Post = (props) => {
                         </OverlayTrigger>
                     )}
 
-                    {likes_count}
+                    {bookmarks_count}
                     <Link to={`/posts/${id}`}>
-                        <i className="far fa-comments" />
+                        <i className={`far fa-comments ${styles.GreyFont}`} />
                     </Link>
                     {comments_count}
                     </div>  

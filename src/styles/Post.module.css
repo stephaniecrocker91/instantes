@@ -10,14 +10,17 @@ h5 {
     margin: 0 0;
     }
 
-.Heart {
+.Icon {
     color: #f85032;
     }
 
-.Heart:hover {
-    color: #2142b2;
+.Icon:hover {
+    color: #217e8f;
     }
 
-.HeartOutline:hover {
+.IconOutline:hover {
     color: #f85032;
     }
+.GreyFont {
+    color: #4d4d4d;
+}
