@@ -15,31 +15,32 @@ const CustomToggle = React.forwardRef(({onClick }, ref) => (
         />
     ));
 
-export const MoreDropdown = ({handleEdit}) => {
+export const MoreDropdown = ({ handleEdit, handleDelete }) => {
     return (
     <Dropdown className="ml-auto" drop="left">
-    <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-        Custom toggle
-    </Dropdown.Toggle>
+        <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+            Custom toggle
+        </Dropdown.Toggle>
 
-    <Dropdown.Menu
-    className="text-center"
-    >
-        <Dropdown.Item 
-        className={styles.DropdownItem}
-        onClick={handleEdit}
-        aria-label="edit"
+        <Dropdown.Menu
+        className="text-center"
+        popperConfig={{ strategy: "fixed" }}
         >
-            <i className="fas fa-edit" />
-        </Dropdown.Item>
-        <Dropdown.Item
-        className={styles.DropdownItem}
-        onClick={()=>{}}
-        aria-label="delete"
-        >
-            <i className="fas fa-trash-alt" />
-        </Dropdown.Item>
-    </Dropdown.Menu>
+            <Dropdown.Item 
+            className={styles.DropdownItem}
+            onClick={handleEdit}
+            aria-label="edit"
+            >
+                <i className="fas fa-edit" />
+            </Dropdown.Item>
+            <Dropdown.Item
+            className={styles.DropdownItem}
+            onClick={handleDelete}
+            aria-label="delete"
+            >
+                <i className="fas fa-trash-alt" />
+            </Dropdown.Item>
+        </Dropdown.Menu>
     </Dropdown>
     );
 };
