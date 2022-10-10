@@ -8,6 +8,7 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
+import Comment from "../comments/Comment";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../context/CurrentUserContext";
@@ -56,7 +57,7 @@ function PostPage() {
                 {comments.results.length ? (
                     comments.results.map((comment) => (
                         <p key={comment.id}>
-                            {comment.owner}: {comment.content}
+                            <Comment key ={comment.id} {...comment} />
                         </p>
                     ))
                 ) : currentUser ? (
