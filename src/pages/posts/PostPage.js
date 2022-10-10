@@ -57,7 +57,10 @@ function PostPage() {
                 {comments.results.length ? (
                     comments.results.map((comment) => (
                         <p key={comment.id}>
-                            <Comment key ={comment.id} {...comment} />
+                            <Comment key ={comment.id} {...comment}
+                            setPost={setPost}
+                            setComments={setComments}
+                            />
                         </p>
                     ))
                 ) : currentUser ? (
