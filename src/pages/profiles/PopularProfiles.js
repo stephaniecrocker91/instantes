@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container } from 'react-bootstrap'
 import { axiosReq } from "../../api/axiosDefaults";
 import { useCurrentUser } from "../../context/CurrentUserContext";
+import Asset from "../../components/Asset";
 import appStyles from '../../App.module.css'
 
 const PopularProfiles = () => {
@@ -32,13 +33,19 @@ const PopularProfiles = () => {
         }, [currentUser]);
     
     return (
-        <Container className={`${appStyles.Content} ${appStyles.Boxed}`}>
-            <p>Top rated profiles.</p>
-            {popularProfiles.results.map((profile) => (
-            <p key={profile.id}>{profile.owner}</p>
-            ))}
+        <Container className={appStyles.Content}>
+        {popularProfiles.results.length ? (
+            <>
+                <p>Most followed profiles.</p>
+                {popularProfiles.results.map((profile) => (
+                <p key={profile.id}>{profile.owner}</p>
+                ))}
+            </>
+            ) : (
+            <Asset spinner />
+            )}
         </Container>
-    )
-}
+        );
+    };
 
 export default PopularProfiles
