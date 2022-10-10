@@ -7,6 +7,9 @@ import styles from "../../styles/Comment.module.css";
 const Comment = (props) => {
     const { profile_id, profile_image, owner, updated_at, content } = props;
 
+    const currentUser = useCurrentUser();
+    const is_owner = currentUser?.username === owner;
+
     return (
         <div>
             <hr />
@@ -19,6 +22,9 @@ const Comment = (props) => {
                     <span className={styles.Date}>{updated_at}</span>
                     <p>{content}</p>
                 </Media.Body>
+                {is_owner && (
+                    <MoreDropdown handleEdit={() => {}} handleDelete={handleDelete} />
+                )}
             </Media>
         </div>
     );
