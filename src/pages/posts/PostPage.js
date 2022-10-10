@@ -60,9 +60,9 @@ function PostPage() {
                         </p>
                     ))
                 ) : currentUser ? (
-                    <span>No comments yet, be the first to comment!</span>
+                    <span>No comments. Be the first to comment!</span>
                 ) : (
-                    <span>No comments... yet</span>
+                    <span>No comments yet!</span>
                 )}
             </Container>
         </Col>
