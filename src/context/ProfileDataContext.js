@@ -34,8 +34,6 @@ export const ProfileDataProvider = ({ children }) => {
         
             handleMount();
         }, [currentUser]);
-    
-}
 
 return (
     <ProfileDataContext.Provider value={profileData}>
@@ -43,4 +41,5 @@ return (
             {children}
         </SetProfileDataContext.Provider>
     </ProfileDataContext.Provider>
-)
+    );
+};
