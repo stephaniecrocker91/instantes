@@ -17,13 +17,16 @@ import { useParams } from "react-router";
 import {
     useProfileData,
     useSetProfileData,
-  } from "../../context/ProfileDataContext";
+    } from "../../context/ProfileDataContext";
+import { Button, Image } from "react-bootstrap";
 
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
     const currentUser = useCurrentUser();
     const { id } = useParams();
     const setProfileData = useSetProfileData();
+    const { pageProfile } = useProfileData();
+    const [profile] = pageProfile.results;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -47,7 +50,11 @@ function ProfilePage() {
         <>
         <Row noGutters className="px-3 text-center">
             <Col lg={3} className="text-lg-left">
-            <p>Image</p>
+            <Image
+            className={styles.ProfileImage}
+            roundedCircle
+            src={profile?.image}
+            />
             </Col>
             <Col lg={6}>
             <h3 className="m-2">Profile username</h3>
