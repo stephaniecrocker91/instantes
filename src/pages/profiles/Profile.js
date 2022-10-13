@@ -8,7 +8,6 @@ import { Button } from "react-bootstrap";
 import { useSetProfileData } from "../../context/ProfileDataContext";
 
 const Profile = (props) => {
-
     const { profile, mobile, imageSize = 55 } = props;
     const { id, following_id, image, owner } = profile;
 
@@ -50,7 +49,7 @@ const Profile = (props) => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Profile
