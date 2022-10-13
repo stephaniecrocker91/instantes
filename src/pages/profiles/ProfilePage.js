@@ -19,6 +19,10 @@ import {
     useSetProfileData,
     } from "../../context/ProfileDataContext";
 import { Button, Image } from "react-bootstrap";
+import InfiniteScroll from "react-infinite-scroll-component";
+import Post from "../posts/Post";
+import { fetchMoreData } from "../../utils/utils";
+import NoResults from "../../assets/no-results.png";
 
 
 function ProfilePage() {
@@ -108,8 +112,24 @@ function ProfilePage() {
     const mainProfilePosts = (
         <>
         <hr />
-        <p className="text-center">Profile owner's posts</p>
+        <p className="text-center">{profile?.owner}'s posts</p>
         <hr />
+        {profilePosts.results.length ? (
+                <InfiniteScroll
+                    children={profilePosts.results.map((post) => (
+                        <Post key={post.id} {...post} setPosts={setProfilePosts} />
+                    ))}
+                    dataLength={profilePosts.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!profilePosts.next}
+                    next={() => fetchMoreData(profilePosts, setProfilePosts)}
+                />
+            ) : (
+                <Asset
+                    src={NoResults}
+                    message={`No results found, ${profile?.owner} hasn't posted yet.`}
+                />
+            )}
         </>
     );
 
