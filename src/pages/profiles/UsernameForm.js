@@ -12,7 +12,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 import {
     useCurrentUser,
     useSetCurrentUser,
-    } from "../../contexts/CurrentUserContext";
+    } from "../../context/CurrentUserContext";
 
     import btnStyles from "../../styles/Button.module.css";
     import appStyles from "../../App.module.css";

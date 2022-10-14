@@ -50,7 +50,7 @@ export function ProfileEditDropdown({ id }) {
     const history = useHistory();
     return (
         <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
-            <Dropdown.Toggle as={ThreeDots} />
+            <Dropdown.Toggle as={CustomToggle} />
             <Dropdown.Menu>
             <Dropdown.Item
                 onClick={() => history.push(`/profiles/${id}/edit`)}
