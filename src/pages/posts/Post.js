@@ -21,7 +21,6 @@ const Post = (props) => {
         content,
         image,
         updated_at,
-        postPage,
         bookmarks_count,
         bookmark_id,
         setPosts,
