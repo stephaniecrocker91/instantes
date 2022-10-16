@@ -59,8 +59,8 @@ const NavBar = () => {
                     <i className="fas fa-bookmark"></i>Favourite
                 </NavLink>
 
-                <NavLink className={styles.NavLink} to="/" >
-                    <i className="fas fa-sign-out-alt" onClick={handleSignOut}></i>Sign out
+                <NavLink className={styles.NavLink} onClick={handleSignOut} to="/" >
+                    <i className="fas fa-sign-out-alt"></i>Sign Out
                 </NavLink>
                 <NavLink
                     className={styles.NavLink}
@@ -94,7 +94,7 @@ const NavBar = () => {
         <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
             <Container>
                 <NavLink to="/">
-                    <Navbar.Brand className={styles.Brand} href="#home">Instantes</Navbar.Brand>
+                    <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
                 </NavLink>
                 {currentUser && addPostIcon}
                 <Navbar.Toggle 
