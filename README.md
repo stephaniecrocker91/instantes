@@ -115,7 +115,9 @@ STRUCTURE:
     * Search bar where you can search posts by relevant keyword.
     * List of most followed profiles
 *   LANDING PAGE: Once logged in....
-    
+    * Only difference is in the Navbar: App name, AddPost, Home, Feed, Liked, Favourite, Sign Out, and Profile link and avatar.
+
+
 
 
 <img src="static/images/homescreen.png" width="500px">
