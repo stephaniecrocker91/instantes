@@ -122,33 +122,68 @@ STRUCTURE:
 
 <img src="static/images/homescreen.png" width="500px">
 
-*   Depending on wether the user is authenticated and logged in or not navbar may display: 
-    * FontAweseom Icon & Home, Register, and Login 
-    * FontAweseom Icon & Home, Favourites, and Logout 
   
 
 
 * * * 
 
-### Recipe Details Page 
+### Sign In Page 
 
 * * *
 
-When user clicks a specific Recipe Post:
+When user clicks a on Sign In link on navbar:
 
-* Nav Bar and Header continues at the top.
-* Recipe Title
-* Recipe Category
-* Recipe Author, date of publication and time.
-* View number of likes, comments and favourotes. User may click on like and favourite button here.
-* Recipe Image
-* Ingredients
-* Instructions
-* Comments section below: user may view comments (oldest at the top, scrolling down to newest), and comment posting as user name.
+* NavBar displays: App title, Home, Sign In (is in larger font and underlined), and Sign Up link 
+* Sign In form containing the following:
+    * Form title: Sign In.
+    * Username
+    * Password
+    * Sign in Button
+    * Link below to Sign Up (in case user has not created a profile yet!)
+* Image by the form. This image disappears when using smaller mobile screens.
 
 
 <img src="static/images/recipe-detail.png" width="500px">
-<img src="static/images/recipe-detail2.png" width="500px">
+
+### Sign Up Page 
+
+* * *
+
+When user clicks a on Sign Up link on navbar:
+
+* NavBar displays: App title, Home, Sign In, and Sign Up (is in larger font and underlined)link .
+* Sign Up form containing the following:
+    * Form title: Sign Up.
+    * Username
+    * Password
+    * Confirm password
+    * Sign Up Button
+    * Link below to Sign Up (in case user already has an account!)
+* Image by the form. This image disappears when using smaller mobile screens.
+
+
+<img src="static/images/recipe-detail.png" width="500px">
+
+### Feed Page 
+
+* * *
+
+When the logged in user clicks a on the Feed link on navbar:
+
+* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count.
+* List of most followed users
+
+
+<img src="static/images/recipe-detail.png" width="500px">
+
+
 
 * * * 
   
