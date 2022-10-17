@@ -25,7 +25,7 @@ _Instantes_ is a public online blog-styled media platford where users can create
 
 * * *
 
-This platform targets pree-teens, teenagers and adults. Anyone who feels the need to post images and content and connect with others! From grandma posting cute cat pics, to professional photographers.. everyone can find their place in Instantes. The search feature allows for people to find content they are interested on, follow the profiles and even bookmark the posts.
+This platform targets pree-teens, teenagers and adults. Anyone who wants to can create a profile can post images and content and connect with others! From grandma posting cute cat pics, to professional photographers.. everyone can find their place in Instantes. The search feature allows for people to find content they are interested on, follow the profiles and even bookmark the posts.
 
 *   Children 13+ (who are allowed to be on social media)
 *   Adults
@@ -109,10 +109,14 @@ STRUCTURE:
 * * *
 
 
-*   LANDING PAGE: This is the page that initially loads when you first arrive at the site. 
-    * Navbar: FontAweseom Icon & Home, Register, and Login.
-    * Header: "For the Love of Food"ß
-    * You can immeditaley view the paginated list of recipe Posts (authenticated or not).
+*   LANDING PAGE: This is the page that initially loads when you first arrive at the site. Without logging in....
+    * Navbar: Header title "Instantes", Home, Sign In and SignUp links (containing font awesome icons).
+    * Posts rendered by all users
+    * Search bar where you can search posts by relevant keyword.
+    * List of most followed profiles
+*   LANDING PAGE: Once logged in....
+    
+
 
 <img src="static/images/homescreen.png" width="500px">
 
