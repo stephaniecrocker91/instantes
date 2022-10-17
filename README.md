@@ -171,19 +171,38 @@ When user clicks a on Sign Up link on navbar:
 When the logged in user clicks a on the Feed link on navbar:
 
 * NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* Search field.
 * Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
     * Post author with avatar by it.
     * Date of post
     * Image
     * Image title
     * Image description content
-    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count.
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
 * List of most followed users
 
 
 <img src="static/images/recipe-detail.png" width="500px">
 
+### Feed Page 
 
+* * *
+
+When the logged in user clicks a on the Feed link on navbar:
+
+* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* Search field.
+* Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
+* List of most followed users
+
+
+<img src="static/images/recipe-detail.png" width="500px">
 
 * * * 
   
@@ -191,26 +210,74 @@ When the logged in user clicks a on the Feed link on navbar:
 
 * * *
 
-When clicking favourites, the user can view all their favourite posts.
+When clicking favourites, the user can view all their favourite bookmarked posts. The layout of the page is the same as the home page and the feed page. Only difference is this will display the users favourite posts only!
 
-* NavBar and Header
-* Sub-Header "Favourites"
-* Paginated list of favourite posts. Similar to the landing home page.
+
 
 <img src="static/images/favourite-recipes.png" width="500px">
 
 * * * 
 
 
-### Create Recipe Page
+### Profile Page
 
 * * *
 
-User can click on "Create Recipe" , which leads them to the following section..
+When logged in user clicks on Profile in the NavBar, the user can view...
 
-* NavBar and Header
-* Sub-Header "Favourites"
-* Form to fill out creating recipe.
+* NavBar displays with logged in icons as previous.
+* User profile details:
+    * Username
+    * Avatar
+    * Posts Count
+    * Followers Count
+    * Following Count
+    * 3 dots dropdown with option to edit profile, change username, change password, and delete profile????????!!!!!!!!!!!!!%$&*&^£@)
+* Listed posts of logged in user rendered below. Each post displays the usual:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
+    * An extra 3 dot dropdown menu to edit or delete the post.
+* List of most followed users
+
+
+<img src="static/images/create-recipe.png" width="500px">
+<img src="static/images/create-recipe2.png" width="500px">
+
+### Add Post Page
+
+* * *
+
+When logged in user clicks on Add Post in the NavBar, the user can view...
+
+* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* Create Post Form including the following fields:
+    * Image user can click on to upload image.
+    * Title input field
+    * Description field
+    * Create button
+    * Cancel button
+
+
+<img src="static/images/create-recipe.png" width="500px">
+<img src="static/images/create-recipe2.png" width="500px">
+  
+### Edit Profile Page
+
+* * *
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, the user can view...
+
+* NavBar displays with logged in icons as previous.
+* Update Profile Form including the following:
+    * Current avatar.
+    * Change the image button that user can click to upload new avatar
+    * Bio text input field
+    * Save button
+    * Cancel button
 
 
 <img src="static/images/create-recipe.png" width="500px">
