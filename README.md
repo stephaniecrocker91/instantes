@@ -53,29 +53,29 @@ Adding & Liking Posts
 11. Like a post: As a logged in user I can manually like a post so that I can show the comunity what I like.
 
 The Posts Page
-12. View most recent posts: As a user I can posts ordered by most recently created first, so that I don't miss any new content.
-13. As a user, I can search for posts using keywords, so that I can find the content I am most interested in.
-14. View bookmarked posts: As a logged in user save posts I liked so that I can easily view them again and again!
-15. View posts of followed users: As a logged in user I can follow users so I can filter the content I view and keep up with their posting.
-16. Infinite scroll: As a user I can infinately scroll through posts, so that I don't have to click on "next page" etc
+1. View most recent posts: As a user I can posts ordered by most recently created first, so that I don't miss any new content.
+2. As a user, I can search for posts using keywords, so that I can find the content I am most interested in.
+3. View bookmarked posts: As a logged in user save posts I liked so that I can easily view them again and again!
+4. View posts of followed users: As a logged in user I can follow users so I can filter the content I view and keep up with their posting.
+5. Infinite scroll: As a user I can infinately scroll through posts, so that I don't have to click on "next page" etc
 
 The Post Page
-Post page: As a user I can view the posts page so that I can read the comments about the post
-Edit post: As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
-Create a comment: As a logged in user I can add comments to a post so that I can share my thoughts about the post
-Comment date: As a user I can see how long ago a comment was made so that I know how old a comment is
-View comments: As a user I can read comments on posts so that I can read what other users think about the posts
-Delete comments: As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
-Edit a comment: As an owner of a comment I can edit my comment so that I can fix or update my existing comment
+1. Post page: As a user I can view individual posts page so that I can read the post comments.
+2. Edit post: As a post owner I can edit my post title, content and image so that I can correct or change my post once created.
+3. Create a comment: As a logged in user I can comment a post so that I can express my opinions it and interact with people.
+4. Comment date: As a user I can see how long ago a comment was made so that I know when this was written.
+5. View comments: As a user I can view post comments so that I can see what others think about this post.
+6. Delete comments: As the owner of a comment I can delete my comment so that I have control over my discussions in the forum.
+7. Edit a comment: As the owner of a comment I can edit my comment so that I update it if wanted.
 
 The Profile Page
-Profile page: As a user I can view other users profiles so that I can see their posts and learn more about them
-Most followed profiles: As a user I can see a list of the most followed profiles so that I can see which profiles are popular
-User profile - user stats: As a user I can view statistics about a specific user: bio, number of posts, follows and users followed so that I can learn more about them
-Follow/Unfollow a user: As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
-View all posts by a specific user: As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
-Edit profile: As a logged in user I can edit my profile so that I can change my profile picture and bio
-Update username and password: As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
+1. Profile page: As a user I can view other users profiles so that I can view their content and potentially intercat with them.
+2. Most followed profiles: As a user I can see a list of the most followed profiles so that I can see which ones are the most popular ones.
+3. User profile - user stats: As a user I can view the stats about a user including bio, number of posts, follows, bookmarks and users followed so that I can know more about the profile.
+4. Follow/Unfollow a user: As a logged in user I can follow or unfollow users so that I can filter the posts I want in my feed.
+5. View all posts by a specific user: As a user I can view all the posts created by one specific user so that I can view their content and see if I would like to follow them or not.
+6. Edit profile: As a logged in user I can edit my profile so that I can update and change it when I like, to best express myself.
+7. Update username and password: As a logged in user I can update my username and password so that I can change my display name whenever I like and always keep my profile safe.
 
 
 
