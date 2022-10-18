@@ -9,6 +9,7 @@ import { useCurrentUser, useSetCurrentUser } from "../context/CurrentUserContext
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
+import { Col, Row } from "react-bootstrap";
 
 const NavBar = () => {
     
@@ -95,32 +96,50 @@ const NavBar = () => {
     )
 
     return (
-        <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
-            <Container>
-                <NavLink to="/">
-                    <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
-                </NavLink>
-                {currentUser && addPostIcon}
-                <Navbar.Toggle 
-                ref={ref}
-                onClick={() => setExpanded(!expanded)}
-                aria-controls="basic-navbar-nav"/>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <NavLink 
-                            exact
-                            to="/" 
-                            className={styles.NavLink} 
-                            activeClassName={styles.Active}
-                            >
-                            <i className="fas fa-home"></i>Home
+        <>
+        {/* <Container>
+                    <Row>
+                        <Col>
+                        <NavLink to="/">
+                            <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
                         </NavLink>
-                        {currentUser ? loggedInIcons : loggedOutIcons}
-                    </Nav>
+                        </Col>
+                    </Row>  
+                </Container> */}
 
-                </Navbar.Collapse>
+
+        <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
+            <Container className="d-flex flex-column">
+                <Row>
+                    <Col>
+                    <NavLink to="/">
+                        <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
+                    </NavLink>
+                    </Col>
+                </Row>  
+                <Row>
+                    {currentUser && addPostIcon}
+                    <Navbar.Toggle 
+                    ref={ref}
+                    onClick={() => setExpanded(!expanded)}
+                    aria-controls="basic-navbar-nav"/>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ml-auto text-center">
+                            <NavLink 
+                                exact
+                                to="/" 
+                                className={styles.NavLink} 
+                                activeClassName={styles.Active}
+                                >
+                                <i className="fas fa-home"></i>Home
+                            </NavLink>
+                            {currentUser ? loggedInIcons : loggedOutIcons}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Row>
             </Container>
         </Navbar>
+        </>
     );
 };
 export default NavBar
