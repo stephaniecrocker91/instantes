@@ -76,38 +76,27 @@ const NavBar = () => {
                 </>
             );
     
-    const loggedOutIcons = (
-        <>
-            <NavLink 
-            to="/signin" 
-            className={styles.NavLink} 
-            activeClassName={styles.Active}
-            >
-                <i className="fas fa-arrow-right"></i>Sign In
-            </NavLink>
-            <NavLink 
-            to="/signup" 
-            className={styles.NavLink} 
-            activeClassName={styles.Active}
-            >
-                <i className="fas fa-feather"></i>Sign Up
-            </NavLink>
-        </>
-    )
+        const loggedOutIcons = (
+            <>
+                <NavLink 
+                to="/signin" 
+                className={styles.NavLink} 
+                activeClassName={styles.Active}
+                >
+                    <i className="fas fa-arrow-right"></i>Sign In
+                </NavLink>
+                <NavLink 
+                to="/signup" 
+                className={styles.NavLink} 
+                activeClassName={styles.Active}
+                >
+                    <i className="fas fa-feather"></i>Sign Up
+                </NavLink>
+            </>
+        );
 
     return (
         <>
-        {/* <Container>
-                    <Row>
-                        <Col>
-                        <NavLink to="/">
-                            <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
-                        </NavLink>
-                        </Col>
-                    </Row>  
-                </Container> */}
-
-
         <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top" variant="dark">
             <Container className="d-flex flex-column">
                 <Row>

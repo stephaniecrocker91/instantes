@@ -24,6 +24,8 @@
 
 .DarkGrey {
         background-color:#2c2b2b;
+        padding-top: 80px!important;
+        padding-bottom: 80px!important;
     } 
 .Image {
     max-height: 40vh;
@@ -35,5 +37,10 @@
     display: none;
 }
 
+.FillerImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 
 

@@ -24,7 +24,7 @@ i {
 
 
 .NavBar{
-    background-color: #5b5b5b;
+    background-color: #bdbaba;
     }
 
 .NavLink {
@@ -34,7 +34,7 @@ i {
 }
 
 .Active {
-    font-size: x-large;
     font-weight: 600;
     text-decoration: underline;
+    color: #217e8f!important;
 }
