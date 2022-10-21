@@ -43,6 +43,7 @@ const SignUpForm = () => {
   };
 
   return (
+    
     <Row className={styles.Row}>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} ${appStyles.DarkGrey} p-4 `}>
@@ -112,7 +113,7 @@ const SignUpForm = () => {
         </Container>
         <Container className={`mt-3 ${appStyles.Content} ${appStyles.Grey}`}>
           <Link className={styles.Link} to="/signin">
-            Already have an account? <span>Sign in</span>
+            Already have an account? <span>Sign in here!</span>
           </Link>
         </Container>
       </Col>

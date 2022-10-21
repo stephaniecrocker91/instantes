@@ -16,6 +16,18 @@
     color: white;
   }
 
+.Link span {
+    color: #ff9254;
+    font-size: larger;
+}
+
+.Link:hover {
+  opacity: 0.8;
+  color: whitesmoke;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
 .Input {
     background: #ffffff;
     border: 1px solid #f0f1f9;
