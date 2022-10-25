@@ -29,6 +29,10 @@
         background-color: #2ba0b4 !important;
     }
 
-/* .Button:active {
+.Button:active {
         background-color: #2ba0b4 !important;
-    } */
+    }
+
+.Button:focus {
+        background-color: #2ba0b4;
+    }
