@@ -102,6 +102,21 @@ function PostCreateForm() {
                         </Alert>
                     ))}
         
+            {/* <Button
+                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                onClick={() => history.goBack()}
+            >
+                cancel
+            </Button>
+            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+                create
+            </Button> */}
+            </div>
+            
+        );
+
+    const submitCancelButtons = (
+        <div className="text-center">
             <Button
                 className={`${btnStyles.Button} ${btnStyles.Blue}`}
                 onClick={() => history.goBack()}
@@ -111,16 +126,22 @@ function PostCreateForm() {
             <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
                 create
             </Button>
-            </div>
-        );
+        </div>
+    )
 
     return (
         <Form onSubmit={handleSubmit}>
             <Row>
+            <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+                    <Container className={appStyles.Content}>{textFields}</Container>
+                    <Container className={appStyles.Content}>{submitCancelButtons}</Container>
+                </Col>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container
                         className={`${appStyles.Content} ${styles.Container} ${appStyles.Boxed} d-flex flex-column justify-content-center`}
                     >
+                        <div className="d-md-none">{textFields}</div>
+                        
                         <Form.Group className="text-center">
                             {image ? (
                                 <>
@@ -160,12 +181,12 @@ function PostCreateForm() {
                             {message}
                         </Alert>
                     ))}
-                        <div className="d-md-none">{textFields}</div>
+                        <div className="d-md-none">{submitCancelButtons}</div>
                     </Container>
                 </Col>
-                <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+                {/* <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
                     <Container className={appStyles.Content}>{textFields}</Container>
-                </Col>
+                </Col> */}
             </Row>
         </Form>
     );
