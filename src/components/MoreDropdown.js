@@ -8,7 +8,7 @@ import { useHistory } from "react-router";
 const CustomToggle = React.forwardRef(({onClick }, ref) => (
     <i
         ref={ref}
-        className="fas fa-ellipsis-v"
+        className={`fas fa-ellipsis-v ${styles.Margin}`}
         onClick={(e) => {
             e.preventDefault();
             onClick(e);
