@@ -36,3 +36,23 @@
 .Button:focus {
         background-color: #2ba0b4;
     }
+
+.Orange {
+    background-color: #ff9254;;
+}
+
+.Orange:hover {
+        opacity: 0.8;
+        background-color: #dc8350;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+.Orange:hover:active {
+        background-color: #dc8350 !important;
+    }
+
+
+.Orange:focus {
+        background-color: #dc8350;
+    }

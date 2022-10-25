@@ -101,30 +101,20 @@ function PostCreateForm() {
                             {message}
                         </Alert>
                     ))}
-        
-            {/* <Button
-                className={`${btnStyles.Button} ${btnStyles.Blue}`}
-                onClick={() => history.goBack()}
-            >
-                cancel
-            </Button>
-            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-                create
-            </Button> */}
             </div>
             
         );
 
     const submitCancelButtons = (
         <div className="text-center">
+            <Button className={`${btnStyles.Button}`} type="submit">
+                create
+            </Button>
             <Button
-                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                className={`${btnStyles.Button} ${btnStyles.Orange}`}
                 onClick={() => history.goBack()}
             >
                 cancel
-            </Button>
-            <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-                create
             </Button>
         </div>
     )
@@ -184,9 +174,6 @@ function PostCreateForm() {
                         <div className="d-md-none">{submitCancelButtons}</div>
                     </Container>
                 </Col>
-                {/* <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-                    <Container className={appStyles.Content}>{textFields}</Container>
-                </Col> */}
             </Row>
         </Form>
     );
