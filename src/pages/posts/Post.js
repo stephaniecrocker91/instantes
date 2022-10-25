@@ -131,8 +131,8 @@ const Post = (props) => {
                 <Card.Img src={image} alt={title} />
             </Link>
             <Card.Body>
-                {title && <Card.Title className="text-center">{title}</Card.Title>}
-                {content && <Card.Text>{content}</Card.Text>}
+                {title && <Card.Title className={`text-center`} >{title}</Card.Title>}
+                {content && <Card.Text className={appStyles.Italics}>{content}</Card.Text>}
                 <div>
                     {is_owner ? (
                         <OverlayTrigger

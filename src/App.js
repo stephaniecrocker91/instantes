@@ -32,7 +32,7 @@ function App() {
                   path="/" 
                   render={() => (
                     <PostsPage
-                      message="Oops, no results found! Please adjust your search word." />
+                      message="No results found... try another search keyword." />
                     )} 
                 />
                 <Route
@@ -40,7 +40,7 @@ function App() {
                   path="/feed"
                   render={() => (
                     <PostsPage
-                      message="Oh no! No results found. Please adjust the search keyword or follow a user."
+                      message="No results found... try another search keyword or follow a user."
                       filter={`owner__followed__owner__profile=${profile_id}&`}
                     />
                   )}
@@ -50,7 +50,7 @@ function App() {
                     path="/liked"
                     render={() => (
                       <PostsPage
-                        message="Oops! No results found. Adjust the search keyword or like a post."
+                        message="No results found... try another search keyword or like a post."
                         filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
                       />
                     )}
