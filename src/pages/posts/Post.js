@@ -113,8 +113,8 @@ const Post = (props) => {
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                     <Link to={`/profiles/${profile_id}`}>
-                        <Avatar src={profile_image} height={55} />
-                        {owner}
+                        <Avatar src={profile_image} height={55}/>
+                        <span className={appStyles.SubTitle}>{owner}</span>
                     </Link>
                     <div className="d-flex align-items-center">
                         <span>{updated_at}</span>
@@ -133,7 +133,7 @@ const Post = (props) => {
             <Card.Body>
                 {title && <Card.Title className="text-center">{title}</Card.Title>}
                 {content && <Card.Text>{content}</Card.Text>}
-                <div className={styles.PostBar}>
+                <div>
                     {is_owner ? (
                         <OverlayTrigger
                         placement="top"
@@ -144,7 +144,7 @@ const Post = (props) => {
                         
                     ) : like_id ? (
                         <span onClick={handleUnlike}>
-                        <i className={`fas fa-heart ${styles.Icon}`} />
+                        <i className={`fas fa-heart ${styles.Red}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleLike}>
@@ -158,7 +158,9 @@ const Post = (props) => {
                         <i className="far fa-heart" />
                         </OverlayTrigger>
                     )}
+                    <span className={styles.Icon}>
                     {likes_count}
+                    </span>
                     {is_owner ? (
                         <OverlayTrigger
                         placement="top"
@@ -169,7 +171,7 @@ const Post = (props) => {
                         
                     ) : bookmark_id ? (
                         <span onClick={handleUnbookmark}>
-                        <i className={`fas fa-bookmark ${styles.Icon}`} />
+                        <i className={`fas fa-bookmark ${styles.Red}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handleBookmark}>
@@ -183,10 +185,11 @@ const Post = (props) => {
                         <i className="far fa-bookmark" />
                         </OverlayTrigger>
                     )}
-
+                    <span className={styles.Icon}>
                     {bookmarks_count}
+                    </span>
                     <Link to={`/posts/${id}`}>
-                        <i className={`far fa-comments ${styles.GreyFont}`} />
+                        <i className={`far fa-comments ${styles.Comments}`} />
                     </Link>
                     {comments_count}
                     </div>  

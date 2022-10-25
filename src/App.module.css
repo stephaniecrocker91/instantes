@@ -9,13 +9,12 @@
 }
 
 .Content {
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
-    /* border: 1px solid #dadadf; */
     background-color:#2c2b2b;
     text-align: center;
     color: white;
-    margin-bottom: 0;
+    
     }
 
 .Header {
@@ -30,6 +29,14 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
+    color: white;
+}
+
+.SubTitle:hover {
+    cursor: pointer!important;
+    transition: color ease-in-out 0.3s!important;
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 .Grey {
@@ -41,12 +48,6 @@
     max-width: 100%;
     object-fit: contain;
     }
-
-/* .Asset {
-    border-radius: 50%!important;
-    object-fit: cover!important;
-    margin: 0px 8px 0px 8px;
-} */
 
 .Hidden {
     display: none;

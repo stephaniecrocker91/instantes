@@ -3,22 +3,26 @@
     margin-bottom: 16px;
     text-align: center;
     }
-.Post figure,
-h5 {
-    margin: 0 0;
-    }
 
 .Icon {
+    margin-right: 30px!important;
+}
+.Red {
     color: #f85032;
     }
 
-.Icon:hover {
-    color: #217e8f;
+.Red:hover {
+    color: #b43a24;
     }
 
 .IconOutline:hover {
     color: #f85032;
     }
-.GreyFont {
-    color: #4d4d4d;
+
+.Comments{
+    color: white;
+}
+
+.Comments:hover {
+    color:#217e8f
 }
