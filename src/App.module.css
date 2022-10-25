@@ -11,28 +11,42 @@
 .Content {
     padding: 10px;
     border-radius: 20px;
+    /* border: 1px solid #dadadf; */
+    background-color:#2c2b2b;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    }
 
-    }   
+.Header {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
 
-.Boxed {
-    border: 1px solid #dadadf!important;
-    border-radius: 2px;
-} 
+.SubTitle {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+}
 
 .Grey {
     background-color:#5b5b5b;
     }
-
-.DarkGrey {
-        background-color:#2c2b2b;
-        padding-top: 80px!important;
-        padding-bottom: 80px!important;
-    } 
+    
 .Image {
     max-height: 40vh;
     max-width: 100%;
     object-fit: contain;
     }
+
+/* .Asset {
+    border-radius: 50%!important;
+    object-fit: cover!important;
+    margin: 0px 8px 0px 8px;
+} */
 
 .Hidden {
     display: none;

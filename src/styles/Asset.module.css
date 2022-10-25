@@ -1,0 +1,6 @@
+.Asset {
+    /* border-radius: 50%!important; */
+    object-fit: cover!important;
+    margin: 0px 8px 0px 8px;
+    max-width: 150px;
+}

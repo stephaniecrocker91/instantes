@@ -73,7 +73,8 @@ function PostCreateForm() {
     const textFields = (
         <div className="text-center">
             <Form.Group controlId="title">
-                <Form.Label>Title</Form.Label>
+                <Form.Label
+                className={appStyles.SubTitle}>Title</Form.Label>
                 <Form.Control 
                     type="text" 
                     placeholder="" 
@@ -88,12 +89,14 @@ function PostCreateForm() {
                     ))}
 
             <Form.Group controlId="content">
-                <Form.Label>Content</Form.Label>
+                <Form.Label
+                className={appStyles.SubTitle}>Content</Form.Label>
                 <Form.Control 
                     type="textarea" 
                     placeholder="" 
                     rows={7} name="content"
                     value={content}
+                    className= {styles.halfContainer}
                     onChange={handleChange}  />
             </Form.Group> 
             {errors.content?.map((message, idx) => (
@@ -123,12 +126,11 @@ function PostCreateForm() {
         <Form onSubmit={handleSubmit}>
             <Row>
             <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-                    <Container className={appStyles.Content}>{textFields}</Container>
-                    <Container className={appStyles.Content}>{submitCancelButtons}</Container>
+                    <Container className={appStyles.Content}>{textFields}{submitCancelButtons}</Container>
                 </Col>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container
-                        className={`${appStyles.Content} ${styles.Container} ${appStyles.Boxed} d-flex flex-column justify-content-center`}
+                        className={`${appStyles.Content} ${styles.Container} ${appStyles} d-flex flex-column justify-content-center`}
                     >
                         <div className="d-md-none">{textFields}</div>
                         
@@ -140,7 +142,7 @@ function PostCreateForm() {
                                     </figure>
                                     <div>
                                         <Form.Label
-                                            className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
+                                            className={`${btnStyles.Button} btn`}
                                             htmlFor="image-upload"
                                         >
                                             Change the image
@@ -154,6 +156,7 @@ function PostCreateForm() {
                                 >
                                     <Asset 
                                         src={Upload}
+                                        // className={styles.Asset}
                                         message="Click or tap here to upload your image!" />
                                 </Form.Label>                        
                             )}
@@ -162,7 +165,7 @@ function PostCreateForm() {
                                 accept="image/*"
                                 onChange={handleChangeImage}
                                 ref={imageInput}
-                                // className={appStyles.Hidden}
+                                className={appStyles.Hidden}
                                 
                             />
                         </Form.Group>

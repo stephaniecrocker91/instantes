@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
+import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../context/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
@@ -108,7 +109,7 @@ const Post = (props) => {
             };
 
     return (
-        <Card className={styles.Post}>
+        <Card className={`${styles.Post} ${appStyles.Content}`}>
             <Card.Body>
                 <Media className="align-items-center justify-content-between">
                     <Link to={`/profiles/${profile_id}`}>

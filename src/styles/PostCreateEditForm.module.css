@@ -1,3 +1,6 @@
 .Container {
     min-height: 343px;
     }
+.halfContainer {
+    min-height: 238px;
+}
