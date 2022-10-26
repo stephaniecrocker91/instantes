@@ -329,8 +329,6 @@ IMPORTANT RELATIONSHIPS BETWEEN TABLES:
 ## SURFACE
 
 * * *
-* When initially planning this site, I knew I wanted more of a masculine style calling for a deep, rich colour scheme. 
-* This would allow for the images to really pop in the app.
 
 * My initial wireframes...
 
@@ -348,7 +346,8 @@ IMPORTANT RELATIONSHIPS BETWEEN TABLES:
 
 * * *
 
-Mostly white, black, grey and a pop of green in afew buttons. Most of the color will come from the images uploaded by uses. 
+* When initially planning this site, I knew I wanted more of a masculine style calling for a deep, rich colour scheme. 
+* This would allow for the images to really pop in the app.
 
 <img src="./static/images/color1.png" width="800px">
 <img src="./static/images/color2.png" width="800px">
@@ -410,8 +409,6 @@ A couple images for our Sign In and Sign Up pages: create the mood of the site. 
 
 
 
-
-
 * * * 
 
 FEATURES:
@@ -419,131 +416,189 @@ FEATURES:
 
 * * *
 
-### Current features
+### Initial Home Page
 
-*   HOME PAGE: (index.html) This is the page that initially loads when you first arrive at the site. 
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * You can immeditaley view the recipes listed. 
-    * Without having set up an authenticated user log, the user can view the recipe details. They can just click on the title and will be redirected to the recipe_detail.html page.
+* * *
 
 
-  <img src="static/images/homescreen.png" width="500px">
+*   LANDING PAGE: Without logging in....
+    * Navbar: Header title "Instantes", Home, Sign In and SignUp links (containing font awesome icons).
+    * Posts rendered by all users
+    * Search bar where you can search posts by relevant keyword.
+    * List of most followed profiles
+
+<img src="src/assets/image1.png" width="500px">
+<img src="src/assets/image2.png" width="500px">
+
+*   LANDING PAGE: Once logged in....
+    * Only difference is in the Navbar: App name, AddPost, Home, Feed, Liked, Favourite, Sign Out, and Profile link and avatar.
 
 
+<img src="static/images/homescreen.png" width="500px">
 
-*   RECIPE DETAIL: (recipe_detail.html) User can view the recipe details. 
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Recipe Title
-    * Recipe Category
-    * Recipe author / Created_on date and time
-    * Like button (and number of likes), Comments image (and number of comments), favourite button (and number of favourites)
-    * Recipe ingredients
-    * Recipe Image
-    * Recipe instructions
-    
+  
+
+
+* * * 
+
+### Sign In Page 
+
+* * *
+
+When user clicks a on Sign In link on navbar:
+
+* NavBar displays: App title, Home, Sign In (is in larger font and underlined), and Sign Up link 
+* Sign In form containing the following:
+    * Form title: Sign In.
+    * Username
+    * Password
+    * Sign in Button
+    * Link below to Sign Up (in case user has not created a profile yet!)
+* Image by the form. This image disappears when using smaller mobile screens.
+
 
 <img src="static/images/recipe-detail.png" width="500px">
-<img src="static/images/recipe-detail2.png" width="500px">
 
-*   REGISTER - (account/signup.html)
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Sign Up Title - and instructions to sign in if you already have an account.
-    * Input fields:
-        * Username
-        * Email (optional)
-        * Passoword
-        * Passoword (again)
-        * Submit button --> Sign Up
+### Sign Up Page 
 
- <img src="static/images/register.png" width="500px"> 
+* * *
 
- When registered and logged in you will be able to view the following in the nav bar: Home, Favourites, Drafts, Logout, Create Recipe, and the listed recipes.
- Before this you will only see: Home, Register, and Login.
+When user clicks a on Sign Up link on navbar:
 
-* LOGIN - (account/login.html)
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Sign IN Title - and instructions to register if you haven't already got an account.
-    * Input fields:
-        * Username
-        * Email (optional)
-        * Remember me optional checkbox (optional)
-        * Submit button --> Sign In
-
- <img src="static/images/login.png" width="500px"> 
-
-When logged in you will be able to view the following in the nav bar: Home, Favourites, Drafts, Logout, Create Recipe, and the listed recipes.
-
-* LOGOUT - (account/logout.html)
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Sign OUT Title 
-    * Message - are yu sure you wnat to sign out?
-    * Submit button --> Sign Out
-
- <img src="static/images/logout.png" width="500px"> 
- 
- Once logged out you will only bew able to view: Home, Register, and Login.
-
-* FAVOURITES - (recipe_favourites.html) -> This is the page that will load, from an authenticated logged in user, when clicking on Favourites.
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * You can immeditaley view the favourited recipes by this user. 
-    * User cna click onto the recipe title to get the recipe details.
-
- <img src="static/images/favourite-recipes.png" width="500px"> 
+* NavBar displays: App title, Home, Sign In, and Sign Up (is in larger font and underlined)link .
+* Sign Up form containing the following:
+    * Form title: Sign Up.
+    * Username
+    * Password
+    * Confirm password
+    * Sign Up Button
+    * Link below to Sign Up (in case user already has an account!)
+* Image by the form. This image disappears when using smaller mobile screens.
 
 
-* DRAFTS - (recipe_drafts.html) -> This is the page that will load, from an authenticated logged in user, when clicking on Drafts. It will display all the recipes that have not been published yet.
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * You can immeditaley view the drafted recipes by this user. 
-    * User can click onto the recipe title to get the recipe details.
+<img src="static/images/recipe-detail.png" width="500px">
+
+### Feed Page 
+
+* * *
+
+When the logged in user clicks a on the Feed link on navbar:
+
+* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* Search field.
+* Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
+* List of most followed users
 
 
-<img src="static/images/drafts.png" width="500px"> 
+<img src="static/images/recipe-detail.png" width="500px">
 
-* CREATE RECIPE - (create_recipe.html) - this is the page where autheticated users can create their own recipe, filling in a simple form.
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Create your Recipe - sub header 
-    * Form: fields (title, category, author, ingredients, instructions, image, status)
-    * Post button.
+### Feed Page 
+
+* * *
+
+When the logged in user clicks a on the Feed link on navbar:
+
+* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* Search field.
+* Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
+* List of most followed users
+
+
+<img src="static/images/recipe-detail.png" width="500px">
+
+* * * 
+  
+### Favourites Page 
+
+* * *
+
+When clicking favourites, the user can view all their favourite bookmarked posts. The layout of the page is the same as the home page and the feed page. Only difference is this will display the users favourite posts only!
+
+
+
+<img src="static/images/favourite-recipes.png" width="500px">
+
+* * * 
+
+
+### Profile Page
+
+* * *
+
+When logged in user clicks on Profile in the NavBar, the user can view...
+
+* NavBar displays with logged in icons as previous.
+* User profile details:
+    * Username
+    * Avatar
+    * Posts Count
+    * Followers Count
+    * Following Count
+    * 3 dots dropdown with option to edit profile, change username, change password, and delete profile????????!!!!!!!!!!!!!%$&*&^£@)
+* Listed posts of logged in user rendered below. Each post displays the usual:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
+    * An extra 3 dot dropdown menu to edit or delete the post.
+* List of most followed users
 
 
 <img src="static/images/create-recipe.png" width="500px">
 <img src="static/images/create-recipe2.png" width="500px">
 
+### Add Post Page
 
-* EDIT RECIPE - (update_recipe.html) - this is the page where autheticated users can edit their own recipe, filling in a simple form. User can only edit the posts they created!
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Edit your Recipe - sub header 
-    * Form: fields (title, category, author, ingredients, instructions, image, status)
-    * Post button.
-    * Delete recipe button
-    
-<img src="static/images/edit-recipe.png" width="500px">
-<img src="static/images/edit-recipe2.png" width="500px"> 
-<img src="static/images/edit-recipe3.png" width="500px"> 
+* * *
 
-    
+When logged in user clicks on Add Post in the NavBar, the user can view...
 
-* DELETE RECIPE - (delete_recipe.html) - this is the page where autheticated users can delet their own recipe. User can only delete the posts they created! This pops up after clicking on the delete this post button on the edit_recipe.html
-    * Navbar: FontAweseom Icon & Home, Register, and Login
-    * Header: "For the Love of Food"
-    * Delete your Recipe - sub header 
-    * Security: are you sure you want to delete this recipe?
-    * Delete button.
+* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* Create Post Form including the following fields:
+    * Image user can click on to upload image.
+    * Title input field
+    * Description field
+    * Create button
+    * Cancel button
 
 
-<img src="static/images/delete-recipe.png" width="500px"> 
+<img src="static/images/create-recipe.png" width="500px">
+<img src="static/images/create-recipe2.png" width="500px">
+  
+### Edit Profile Page
+
+* * *
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, the user can view...
+
+* NavBar displays with logged in icons as previous.
+* Update Profile Form including the following:
+    * Current avatar.
+    * Change the image button that user can click to upload new avatar
+    * Bio text input field
+    * Save button
+    * Cancel button
 
 
-* * * 
+<img src="static/images/create-recipe.png" width="500px">
+<img src="static/images/create-recipe2.png" width="500px">
+  
+
+
 
 ### Future features
 
@@ -570,6 +625,8 @@ When logged in you will be able to view the following in the nav bar: Home, Favo
 
 * * *
 
+*   [REACT](https://reactjs.org/)
+*   [REACT-Bootstrap](https://react-bootstrap-v4.netlify.app/)
 *   [Django](https://www.djangoproject.com/)
 *   [GitHub](https://github.com/)
 *   [GitPod](https://www.gitpod.io/)
