@@ -88,7 +88,8 @@ function PostEditForm() {
     const textFields = (
         <div className="text-center">
             <Form.Group controlId="title">
-                <Form.Label>Title</Form.Label>
+                <Form.Label
+                className={appStyles.SubTitle}>Title</Form.Label>
                 <Form.Control 
                     type="text" 
                     placeholder="" 
@@ -103,12 +104,14 @@ function PostEditForm() {
                     ))}
 
             <Form.Group controlId="content">
-                <Form.Label>Content</Form.Label>
+                <Form.Label
+                className={appStyles.SubTitle}>Content</Form.Label>
                 <Form.Control 
                     type="textarea" 
                     placeholder="" 
                     rows={7} name="content"
                     value={content}
+                    className= {styles.halfContainer}
                     onChange={handleChange}  />
             </Form.Group> 
             {errors.content?.map((message, idx) => (

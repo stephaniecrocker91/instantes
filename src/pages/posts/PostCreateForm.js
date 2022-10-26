@@ -142,7 +142,7 @@ function PostCreateForm() {
                                     </figure>
                                     <div>
                                         <Form.Label
-                                            className={`${btnStyles.Button} btn`}
+                                            className={`${btnStyles.Button} ${btnStyles.Blue}  btn`}
                                             htmlFor="image-upload"
                                         >
                                             Change the image
@@ -156,7 +156,6 @@ function PostCreateForm() {
                                 >
                                     <Asset 
                                         src={Upload}
-                                        // className={styles.Asset}
                                         message="Click or tap here to upload your image!" />
                                 </Form.Label>                        
                             )}
