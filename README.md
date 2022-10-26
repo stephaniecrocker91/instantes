@@ -302,6 +302,8 @@ Prior to commencing to write my code out, I planned out the ERD.
 
 <img src="./static/images/diagram.png" width="1000px">
 
+You can find a link to a more in depth database Backend ReadMe HERE.
+
 The User Model ---> Django default User Model. We will use user (PK), Email and Password.
 
 Recipe Model --> Is our main model. It contains all the required fields for our recipe: recipe_id(PK), title, category(FK), slug, author(FK-User), created_on, image, ingredients, directions, likes, favourites, status and user. 
@@ -327,8 +329,8 @@ IMPORTANT RELATIONSHIPS BETWEEN TABLES:
 ## SURFACE
 
 * * *
-* When initially planning this site, I knew it would be clean, light and minimalistic. 
-* The recipes should read easily, and the pop of color will come from the images and perhaps a few buttons. Most would be in black and white.
+* When initially planning this site, I knew I wanted more of a masculine style calling for a deep, rich colour scheme. 
+* This would allow for the images to really pop in the app.
 
 * My initial wireframes...
 
@@ -361,23 +363,54 @@ Mostly white, black, grey and a pop of green in afew buttons. Most of the color 
 
 * * *
 
-Light, spaced, delicate and clean font. 
-*  Montserrat
+Light, spaced, masculine and clean font. 
+*  Poppins
 *  Use of letter-spacing
+*  Use of uppercase
 
 
 
-<img src="static/images/montserrat.png" width="500px">
+
+<img src="src/assets/poppins.png" width="500px">
+<img src="src/assets/poppins-2.png" width="500px">
 
 ### Images and Icons
 
 * * *
 
-Use of a few font-awesome black icons to add some charater.
-Still very minimalistic!
+Use of a few font-awesome icons for:
+* NavBar links
+* Like, Bookmark, and comment buttons.
+* Dropdown menu for editing/deleting posts
+* Dropdown meny for editing profile
+
+<img src="src/assets/navbar.png" width="500px">
+<img src="src/assets/dropdown-post.png" width="500px">
+<img src="src/assets/like-bookmark-comment.png" width="500px">
+
+Default avatar profile image: which is automatically uploaded when profile is created.
+
+<img src="src/assets/like-bookmark-comment.png" width="500px">
+
+Vectors used for:
+* Search feature: when something is not found (page, searched item, or no posts)
+* Upload item
+
+<img src="src/assets/magnifying.png" width="500px">
+<img src="src/assets/upload-rm.png" width="500px">
+
+Hexedecimal icon for the search bar.
+
+<img src="src/assets/searchbar.png" width="500px">
+
+A couple images for our Sign In and Sign Up pages: create the mood of the site. I purposefully picked images that go with the color scheme of the site: dark, deep, masculine colors.
+
+<img src="src/assets/image1.png" width="500px">
+<img src="src/assets/image2.png" width="500px">
 
 
-<img src="static/images/icons.png" width="500px">
+
+
 
 * * * 
 
