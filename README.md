@@ -898,6 +898,9 @@ DJANGO ADMINISTRATOR
 
 ###### BUGS & FIXES: 
 
+Go to settings in safari, under privacy and security , there is a button 'Prevent Cross-Site Tracking' disable this and try and log in!!!
+
+
 
 * * * 
 
