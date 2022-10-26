@@ -52,9 +52,9 @@ function SignInForm() {
         }
     };
 return (
-    <Row className={styles.Row}>
-        <Col className="my-auto p-0 p-md-2" md={6}>
-            <Container className={`${appStyles.Content} p-4 `}>
+    <Row>
+        <Col className={`my-auto p-0 p-md-2`} md={6}>
+            <Container className={`${appStyles.Content} ${styles.Form} p-4 `}>
                 <h1 className={appStyles.Header}>Sign in</h1>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="username">
