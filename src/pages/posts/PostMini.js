@@ -1,15 +1,16 @@
 import React from 'react'
 import { useCurrentUser } from "../../context/CurrentUserContext";
 import styles from "../../styles/ProfilePost.module.css";
-import btnStyles from "../../styles/Button.module.css";
 import SmallPost from '../../components/SmallPost';
 import { Link } from 'react-router-dom';
+import Post from './Post';
 import postStyles from "../../styles/Post.module.css";
 
 
+
 const PostMini = (props) => {
-    const { post, mobile, imageSize = 55 } = props;
-    const { id, image, title, owner } = post;
+    const { post, mobile, imageSize = 55, handleLike, handleUnlike} = props;
+    const { id, image, title, owner, like_id, likes_count } = post;
 
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner;
@@ -24,10 +25,37 @@ const PostMini = (props) => {
             </Link>
             </div>
             <div className={`mx-2 ${styles.WordBreak}`}>
-                <p>{title}</p>
+                <p><em>{title}</em></p>
+                {/* <p>by:<em>{owner}</em></p>  */}
+            </div>
+            <div className={`text-right ${!mobile && "ml-auto"}`}>
+                {!mobile &&
+                currentUser &&
+                // !is_owner && 
+                (like_id ? (
+                    <>
+                    <span onClick={handleUnlike}>
+                        <i className={`fas fa-heart ${postStyles.Red}`} />
+                    </span>
+                    <span className={styles.Icon}>
+                            {likes_count}
+                    </span>
+                    </>
+                ) : (
+                    <>
+                    <span onClick={handleLike}>
+                        <i className={`far fa-heart ${postStyles.IconOutline}`} />
+                    </span>
+                    <span className={styles.Icon}>
+                        {likes_count}
+                    </span>
+                    </>
+                )
+                )}
             </div>
         </div>
+    
     );
-};
+    };
 
 export default PostMini
