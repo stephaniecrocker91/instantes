@@ -5,6 +5,7 @@ import appStyles from "../../App.module.css";
 import Post from './Post';
 import { useCurrentUser } from '../../context/CurrentUserContext';
 import Asset from '../../components/Asset';
+import PostMini from './PostMini';
 
 const PopularPosts = ({ mobile }) => {
     const[postData, setPostData] = useState({
@@ -42,12 +43,14 @@ const PopularPosts = ({ mobile }) => {
                         {mobile ? (
                             <div className="d-flex justify-content-around">
                             {popularPosts.results.slice(0,3).map((post) => (
-                                <p key={post.id}>{post.title}</p>
+                                // <p key={post.id}>{post.title}</p>
+                                <PostMini key={post.id} post={post} mobile />
                         ))}
                         </div>
                         ):(
                             popularPosts.results.map((post) => (
-                                <p key={post.id}>{post.title}</p>
+                                // <p key={post.id}>{post.title}</p>
+                                <PostMini key={post.id} post={post} />
                         ))
                     )}
                 </>
