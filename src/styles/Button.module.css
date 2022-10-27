@@ -1,9 +1,9 @@
 .Button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     align-self: center;
-    border-radius: 70px;
-    border-color: white;
-    background-color: #217e8f;
+    border-radius: 10px;
+    border-color: #5b5a2e;
+    background-color: #5b5a2e;
     margin: 0 5px;
     min-width: 75px;
     color: white;
@@ -17,21 +17,21 @@
 
 .Button:hover {
         opacity: 0.8;
-        background-color: #1d6b79;
+        background-color: #6d6c3a;
         border-color: transparent;
         cursor: pointer;
     }
 
 .Button:hover:active {
-        background-color: #2ba0b4 !important;
+        background-color: #8a8849 !important;
     }
 
 .Button:active {
-        background-color: #2ba0b4 !important;
+        background-color: #8a8849 !important;
     }
 
 .Button:focus {
-        background-color: #2ba0b4;
+        background-color: #8a8849;
     }
 
 .Orange {

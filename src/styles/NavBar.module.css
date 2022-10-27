@@ -31,5 +31,9 @@ i {
 .Active {
     font-weight: 600;
     text-decoration: underline;
-    color: #217e8f!important;
+    /* color: #8a8849!important; */
+    background-color: white!important;
+    color: #2c2b2b!important;
+    padding: 10px 10px 0 10px;
+    border-radius: 5px;
 }
