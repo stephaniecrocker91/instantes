@@ -24,6 +24,7 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import PopularPosts from "../posts/PopularPosts";
 
 function ProfilePage() {
     const [hasLoaded, setHasLoaded] = useState(false);
@@ -68,7 +69,7 @@ function ProfilePage() {
                     />
                     </Col>
                     <Col lg={6}>
-                        <h3 className="m-2">{profile?.owner}</h3>
+                        <h3 className={`m-2 ${appStyles.Header}`}>{profile?.owner}</h3>
                         <Row className="justify-content-center no-gutters">
                             <Col xs={3} className="my-2">
                                 <div>{profile?.posts_count}</div>
@@ -113,7 +114,7 @@ function ProfilePage() {
     const mainProfilePosts = (
         <>
         <hr />
-        <p className="text-center">{profile?.owner}'s posts</p>
+        <p className={`text-center-2 ${appStyles.SubTitle}`}>{profile?.owner}'s posts</p>
         <hr />
         {profilePosts.results.length ? (
                 <InfiniteScroll
@@ -138,7 +139,9 @@ function ProfilePage() {
         <Row>
         <Col className="py-2 p-0 p-lg-2" lg={8}>
             <PopularProfiles mobile />
+            <PopularPosts mobile />
             <Container className={appStyles.Content}>
+            {/* <Container className={appStyles.Content}> */}
             {hasLoaded ? (
                 <>
                 {mainProfile}
@@ -151,6 +154,7 @@ function ProfilePage() {
         </Col>
         <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
             <PopularProfiles />
+            <PopularPosts />
         </Col>
         </Row>
     );

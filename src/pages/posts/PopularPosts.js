@@ -7,7 +7,9 @@ import { useCurrentUser } from '../../context/CurrentUserContext';
 import Asset from '../../components/Asset';
 import PostMini from './PostMini';
 
-const PopularPosts = ({ mobile }) => {
+const PopularPosts = (props) => {
+    const {mobile, setPosts} = props;
+    console.log(props)
     const[postData, setPostData] = useState({
         pagePost: {results:[] },
         popularPosts: { results: [] },
@@ -48,7 +50,7 @@ const PopularPosts = ({ mobile }) => {
                         </div>
                         ):(
                             popularPosts.results.map((post) => (
-                                <PostMini key={post.id} post={post} />
+                                <PostMini key={post.id} post={post} setPosts={setPosts}/>
                         ))
                     )}
                 </>
