@@ -4,6 +4,7 @@ import { axiosReq } from '../../api/axiosDefaults';
 import appStyles from "../../App.module.css";
 import Post from './Post';
 import { useCurrentUser } from '../../context/CurrentUserContext';
+import Asset from '../../components/Asset';
 
 const PopularPosts = () => {
     const[postData, setPostData] = useState({
@@ -32,12 +33,18 @@ const PopularPosts = () => {
 
     return (
         <Container className={appStyles.Content}>
-            <p>Most liked posts</p>
-            {popularPosts.results.map((post) => (
-                <p key={post.id}>{post.title}</p>
-            ))}
+            {popularPosts.results.length ? (
+                <>
+                    <p>Most liked posts</p>
+                    {popularPosts.results.map((post) => (
+                        <p key={post.id}>{post.title}</p>
+                    ))}
+                </>
+            ) : (
+                <Asset spinner />
+            )}
         </Container>
-    )
-}
+    );
+};
 
 export default PopularPosts
