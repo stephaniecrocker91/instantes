@@ -16,7 +16,14 @@
     text-align: center;
     color: white;
     margin: 2rem;
-    
+    }
+.ContentLight {
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#2c2b2bed;
+    text-align: center;
+    color: white;
+    margin: 2rem;
     }
 
 .Header {

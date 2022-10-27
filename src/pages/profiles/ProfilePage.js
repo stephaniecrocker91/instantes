@@ -140,7 +140,7 @@ function ProfilePage() {
         <Col className="py-2 p-0 p-lg-2" lg={8}>
             <PopularProfiles mobile />
             <PopularPosts mobile />
-            <Container className={appStyles.Content}>
+            <Container className={appStyles.ContentLight}>
             {/* <Container className={appStyles.Content}> */}
             {hasLoaded ? (
                 <>
