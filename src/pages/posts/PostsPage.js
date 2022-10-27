@@ -51,11 +51,9 @@ function PostsPage({ message, filter = "" }) {
 
   return (
     <Row className="h-100">
-      <Col md={3} className="d-none d-lg-block p-0 p-lg-2">
-        <PopularPosts />
-      </Col>
-      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
+        <PopularPosts mobile />
         <Form
             className={`${styles.SearchBar}`}
             onSubmit={(event) => event.preventDefault()}
@@ -94,8 +92,9 @@ function PostsPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col md={3} className="d-none d-lg-block p-0 p-lg-2">
+      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
+        <PopularPosts />
       </Col>
     </Row>
   );

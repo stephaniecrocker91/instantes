@@ -27,23 +27,6 @@ const Post = (props) => {
         setPosts,
     } = props
 
-    // const { post } = props
-    // const {
-    //         id,
-    //         owner,
-    //         profile_id,
-    //         profile_image,
-    //         comments_count,
-    //         likes_count,
-    //         like_id,
-    //         title,
-    //         content,
-    //         image,
-    //         updated_at,
-    //         bookmarks_count,
-    //         bookmark_id,
-    //         setPosts,
-    //     } = post
     
     const currentUser = useCurrentUser();
     const is_owner = currentUser?.username === owner
