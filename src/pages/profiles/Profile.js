@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../../styles/Profile.module.css";
+import styles from "../../styles/ProfilePost.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import { Link } from 'react-router-dom';
 import { useCurrentUser } from "../../context/CurrentUserContext";

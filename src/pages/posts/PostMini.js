@@ -1,9 +1,10 @@
 import React from 'react'
 import { useCurrentUser } from "../../context/CurrentUserContext";
-import styles from "../../styles/Profile.module.css";
+import styles from "../../styles/ProfilePost.module.css";
 import btnStyles from "../../styles/Button.module.css";
-import Avatar from '../../components/Avatar';
+import SmallPost from '../../components/SmallPost';
 import { Link } from 'react-router-dom';
+import postStyles from "../../styles/Post.module.css";
 
 
 const PostMini = (props) => {
@@ -19,7 +20,7 @@ const PostMini = (props) => {
         >
             <div>
             <Link className="align-self-center" to={`/posts/${id}`}>
-                <Avatar src={image} height={imageSize} />
+                <SmallPost src={image} height={imageSize} className={styles.SmallPost}/>
             </Link>
             </div>
             <div className={`mx-2 ${styles.WordBreak}`}>
