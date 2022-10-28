@@ -58,7 +58,7 @@ import {
             <Container className={appStyles.Content}>
             <Form onSubmit={handleSubmit} className="my-2">
                 <Form.Group>
-                <Form.Label>Change username</Form.Label>
+                <Form.Label className= {appStyles.SubTitle}>Change username</Form.Label>
                 <Form.Control
                     placeholder="username"
                     type="text"
@@ -72,7 +72,7 @@ import {
                 </Alert>
                 ))}
                 <Button
-                className={`${btnStyles.Button} ${btnStyles.Blue}`}
+                className={`${btnStyles.Button} ${btnStyles.Orange}`}
                 onClick={() => history.goBack()}
                 >
                 cancel

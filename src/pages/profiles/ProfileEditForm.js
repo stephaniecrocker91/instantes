@@ -102,7 +102,7 @@ import {
             </Alert>
         ))}
         <Button
-            className={`${btnStyles.Button} ${btnStyles.Blue}`}
+            className={`${btnStyles.Button} ${btnStyles.Orange}`}
             onClick={() => history.goBack()}
         >
             cancel
@@ -141,6 +141,7 @@ import {
                     id="image-upload"
                     ref={imageFile}
                     accept="image/*"
+                    className={appStyles.Hidden}
                     onChange={(e) => {
                     if (e.target.files.length) {
                         setProfileData({

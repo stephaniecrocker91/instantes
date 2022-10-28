@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import { axiosRes } from "../../api/axiosDefaults";
+import btnStyles from "../../styles/Button.module.css";
 
 import styles from "../../styles/CommentCreateEditForm.module.css";
 
@@ -51,7 +52,7 @@ function CommentEditForm(props) {
         </Form.Group>
         <div className="text-right">
             <button
-            className={styles.Button}
+            className={`${styles.Button}`}
             onClick={() => setShowEditForm(false)}
             type="button"
             >

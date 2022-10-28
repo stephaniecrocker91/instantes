@@ -240,9 +240,9 @@ When logged in user clicks on Add Post in the NavBar, the user can view...
 
 * * *
 
-When logged in user clicks on three dots above their own post, the user can view...
+When logged in user clicks on three dots above their own post and the edit symbol, the user can view...
 
-* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* NavBar displays with logged in icons as previous.
 * Create Post Form including the following fields with default content:
     * Image user can click on button below to upload new image.
     * Title input field
@@ -325,12 +325,45 @@ When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, 
     * Save button
     * Cancel button
     * In future: delete post!
-* List of most followed users
-* List of most liked posts
 
-<img src="src/assets/threedots.png" width="500px">
+
+<img src="src/assets/editprofile.png" width="500px">
+
   
+### Edit Username Page
 
+* * *
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, and change username, the user can view...
+
+* NavBar displays with logged in icons as previous.
+* Edit usernmae:
+    * Subtite
+    * Current username as default, which can be edited
+    * Save button
+    * Cancel button 
+    
+    <img src="src/assets/editusername.png" width="500px">
+
+
+* * * 
+
+### Edit Password Page
+
+* * *
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, and change password, the user can view...
+
+* NavBar displays with logged in icons as previous.
+* Edit usernmae:
+    * Subtite
+    * New password input field
+    * Confirm new password input field
+    * Save button
+    * Cancel button 
+    
+    <img src="src/assets/editpassword.png" width="500px">
+ 
 
 
 ## SKELETON:
@@ -500,6 +533,64 @@ FEATURES:
 
 * * * 
 
+
+
+### Individual Post Page
+
+* * *
+
+When user clicks on any Post, the user can view the individual post page which contains...
+
+* NavBar displays with logged in icons/logged out icons. 
+
+<img src="src/assets/navbarblank.png" width="500px">
+<img src="src/assets/navbar2.png" width="500px">
+
+
+
+* individual post which displays:
+    * Post author with avatar by it.
+    * Date of post <img src="src/assets/avataranddate.png" width="500px">
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontawesome icon and count <img src="src/assets/details.png" width="500px">
+
+Comment section containing:
+
+If user logged in....
+* Avatar
+* Input field to add comment 
+* POST button to submit form
+* Comments displayed below (from most recent)
+
+<img src="src/assets/commentform.png" width="500px">
+
+If not logged in - no form is present! Only Comments subtitle displayed
+<img src="src/assets/comments.png" width="500px">
+
+Comments displayed below containing...
+* Avatar
+* Username
+* How long ago it was posted
+* If logged in user made this comment: three dots (to allow for edit or deleting comment)
+* The comment
+<img src="src/assets/individualcomment.png" width="500px">
+
+
+If clicking edit comment symbol, the following is displayed:
+* Avatar
+* Username
+* Input field with default comment
+* Cancel button
+* Save button
+<img src="src/assets/editcomment.png" width="500px">
+
+
+  
+
+* * * 
+
 ### Sign In Page 
 
 * * *
@@ -648,7 +739,7 @@ When the logged in user clicks a on the Bookmark link on navbar:
 
 
 
-<img src="src/assets/bookmarked.png" width="200px">
+<img src="src/assets/bookmarked.png" width="600px">
 
 * * * 
 
@@ -660,6 +751,9 @@ When the logged in user clicks a on the Bookmark link on navbar:
 When logged in user clicks on Profile in the NavBar, the user can view...
 
 * NavBar displays with logged in icons as previous.
+
+<img src="src/assets/navbarblank.png" width="500px">
+
 * User profile details:
     * Username
     * Avatar
@@ -667,6 +761,12 @@ When logged in user clicks on Profile in the NavBar, the user can view...
     * Followers Count
     * Following Count
     * 3 dots dropdown with option to edit profile, change username, change password, and delete profile????????!!!!!!!!!!!!!%$&*&^£@)
+    * Subtitle: Owner's posts
+
+<img src="src/assets/stats.png" width="500px">
+<img src="src/assets/threedots.png" width="500px">
+
+
 * Listed posts of logged in user rendered below. Each post displays the usual:
     * Post author with avatar by it.
     * Date of post
@@ -675,11 +775,25 @@ When logged in user clicks on Profile in the NavBar, the user can view...
     * Image description content
     * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
     * An extra 3 dot dropdown menu to edit or delete the post.
-* List of most followed users
+
+<img src="src/assets/profilefeed.png" width="500px">
 
 
-<img src="static/images/create-recipe.png" width="500px">
-<img src="static/images/create-recipe2.png" width="500px">
+* List of most followed profiles
+
+    <img src="src/assets/popularprofiles.png" width="200px">
+    
+    And in mobile view....
+
+    <img src="src/assets/popularprofilesm.png" width="200px">
+
+* List of most liked posts
+
+    <img src="src/assets/popularposts.png" width="200px">
+    
+    And in mobile view...
+
+    <img src="src/assets/popularpostsm.png" width="200px">
 
 ### Add Post Page
 
@@ -687,7 +801,11 @@ When logged in user clicks on Profile in the NavBar, the user can view...
 
 When logged in user clicks on Add Post in the NavBar, the user can view...
 
-* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* NavBar displays with logged in icons as previous. Create Post link is styled differently to stand out.
+
+<img src="src/assets/navbar7.png" width="500px">
+
+
 * Create Post Form including the following fields:
     * Image user can click on to upload image.
     * Title input field
@@ -695,30 +813,107 @@ When logged in user clicks on Add Post in the NavBar, the user can view...
     * Create button
     * Cancel button
 
+<img src="src/assets/createpostform.png" width="500px">
+<img src="src/assets/uploadimage.png" width="500px">
 
-<img src="static/images/create-recipe.png" width="500px">
-<img src="static/images/create-recipe2.png" width="500px">
-  
+
+* * * 
+
+
+### Edit Post Page
+
+* * *
+
+When logged in user clicks on three dots above their own post, and the edit symbol, the user can view...
+
+* NavBar displays with logged in icons as previous.
+
+<img src="src/assets/navbarblank.png" width="500px">
+
+
+* Create Post Form including the following fields with default content:
+    * Default Image     
+    * Button user can click onto upload new image.
+    * Title input field with default text
+    * Description field with default text
+    * Save button
+    * Cancel button
+
+<img src="src/assets/editpostform.png" width="500px">
+<img src="src/assets/editimage.png" width="500px">
+
+
+
+<img src="src/assets/editpost.png" width="500px">
+
+* * * 
+
+
 ### Edit Profile Page
 
 * * *
 
-When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, the user can view...
+<img src="src/assets/threedots.png" width="500px">
+
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, and edit profile, the user can view...
 
 * NavBar displays with logged in icons as previous.
+
+<img src="src/assets/navbarblank.png" width="500px">
+
+
 * Update Profile Form including the following:
     * Current avatar.
-    * Change the image button that user can click to upload new avatar
+    * Change the image button that user can click to upload new avatar. <img src="src/assets/imagebio.png" width="500px"> 
     * Bio text input field
     * Save button
-    * Cancel button
-
-
-<img src="static/images/create-recipe.png" width="500px">
-<img src="static/images/create-recipe2.png" width="500px">
+    * Cancel button <img src="src/assets/bioform.png" width="500px">
   
+* * * 
+
+### Edit Username Page
+
+* * *
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, and change username, the user can view...
+
+* NavBar displays with logged in icons as previous.
+
+<img src="src/assets/navbarblank.png" width="500px">
 
 
+* Edit usernmae:
+    * Subtite
+    * Current username as default, which can be edited
+    * Save button
+    * Cancel button 
+    
+    <img src="src/assets/usernameform.png" width="500px">
+
+
+* * * 
+
+### Edit Password Page
+
+* * *
+
+When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, and change password, the user can view...
+
+* NavBar displays with logged in icons as previous.
+
+<img src="src/assets/navbarblank.png" width="500px">
+
+
+* Edit usernmae:
+    * Subtite
+    * New password input field
+    * Confirm new password input field
+    * Save button
+    * Cancel button 
+    
+    <img src="src/assets/passwordform.png" width="500px">
+  
 
 ### Future features
 
