@@ -1012,12 +1012,16 @@ This was solved by
 All stylsheets were tested and this message was displayed for all test...
 
 NO ERRORS FOUND!
-    <img src="src/assets/css-val.png" width="800px">
+<img src="src/assets/css-val.png" width="800px">
 
 #### [LIGHHOUSE TESTING]()
 
 Many pages were tested and here are some examples of the results found...
 
+
+The lower performance is due to the images being too heavy. I would like to reduce the image sizes of image uploads- so as to run more efficiently. I will work on this post-submission
+
+<img src="src/assets/lighthouse.png" width="800px">
 
 
 
