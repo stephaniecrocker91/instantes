@@ -1037,27 +1037,6 @@ HOMEPAGE:
 
 <img src="static/images/homescreen.png" width="800px">
 
-- When clicking the fontawesome button (knife and fork), home(in navbar) or the site title (For the Love of Food) link works and we get redirected to the homepage. This works from any part of the site!
-
-- When clicking on Register (in our navbar), or sign up link (in our login page), the link works correctly and re-directs us to the signup.html page.
-
-<img src="static/images/signup2.png" width="800px">
-<img src="static/images/signup.png" width="800px">
-
-- When clicking on Login (in our navbar), or Sign In link (in our Register page), the link works correctly and re-directs us to the login.html page.
-
-<img src="static/images/login1.png" width="800px">
-<img src="static/images/login2.png" width="800px">
-
-- Recipes are displayed in lists, three per row. Unless viewing from a smaller device.  In this case, they are below each other.
-
-<img src="static/images/list-display.png" width="800px">
-<img src="static/images/list-display2.png" width="800px">
-
-- When clicking on any recipe (without being logged in), we are directed to the recipe_detail.html. User can view all the details, amount of likes, favourites and comments. They can view the comments. They CANNOT comment.
-
-<img src="static/images/recipe-detail.png" width="800px">
-<img src="static/images/recipe-detail2.png" width="800px">
 
 
 * * *
@@ -1072,10 +1051,6 @@ SIGNUP:
 <img src="static/images/inputfield3.png" width="800px">
 
 
-- Once registering, the user is immediately logged in, and an alert comes up displaying who has logged in. The alert disappears after 3 seconds.
-<img src="static/images/alert1.png" width="800px">
-<img src="static/images/alertvanish.png" width="800px">
-
 * * *
 
 LOGIN...
@@ -1086,12 +1061,6 @@ LOGIN...
 
 <img src="static/images/login-field.png" width="800px">
 
-- Once logged on, the site user can view the following on the nav bar:
-<img src="static/images/navbar1.png" width="800px">
-
-- if not logged in, the user can only view...
-<img src="static/images/navbar-guest.png" width="800px">
-
 * * *
 
 FROM LOGGED IN USER ...
@@ -1099,68 +1068,7 @@ FROM LOGGED IN USER ...
 * * *
 
 - When clicking on any recipe (oncelogged in), we are directed to the recipe_detail.html. User can view all the details, amount of likes, favourites and comments. They can view the comments. Here they have the ability to:
-    * Comment on a post
-    
-    <img src="static/images/comment.png" width="800px">
-    
-    <img src="static/images/comment2.png" width="800px">
 
-    * Like a post
-
-    * Favourite a post
-    <img src="static/images/like-fave-post.png" width="800px">
-
-    * Form cannot be submitted without entering to body field.
-    
-    <img src="static/images/field-warning.png" width="800px">
-
-- When clicking on Create Recipe button in top right corner, the user is directed to create_recipe.html page that requires a form to be submitted.
-    * Summernote is displayed in the text field for Ingredients, and Directions. The default font is Monserrat, 14px and font weight 200.
-
-    <img src="static/images/create-recipe.png" width="800px">
-    
-    <img src="static/images/create-recipe2.png" width="800px">
-
-    * All fields are required to submit. form except for: Image and Status 
-    
-    <img src="static/images/required.png" width="800px">
-    
-    <img src="static/images/required2.png" width="800px">
-    
-    BUG! I would like this alert to be displayed on every field that is. required. I. noticed this is not the case with the Directions field or the title.
-
-    * When clicking Create Recipe, the user is redirected to the homepage. If no image was uploadedm a default is presented. (as in SC example)
-
-    <img src="static/images/create-recipe3.png" width="800px">
-
-    * If the user created the recipe, they can edit it. If they did not create the recipe, this option is not available. SC had a edit fontawesome icon. Teriyaki and potato sides do not! 
-
-     <img src="static/images/create-recipe3.png" width="800">
-
-- When clicking on the Edit icon on the recipe (that is available only if the user created this specific recipe), the user is redirected to the edit_recipe.html page. This is very similar to the create_recipe.html. In this case the fields are pre-populated. 
-
-<img src="static/images/edit-1.png" width="800px">
-<img src="static/images/edit-2.png" width="800px">
-
-There is an extra feature = DELETE RECIPE!  It is in a bright red button, so as to warn the user of teh severity of this button's functinality.
-
-<img src="static/images/edit-3.png" width="800px">
-
-When changing the details and clicking Update Recipe button, the use ris redirected to the home page. The Recipe is updated!!
-
-<img src="static/images/updated-succes.png" width="800px">
-
-
-- When clicking Favourites on navbar, the user is redirected to the favourites page. This renders only the recipes that our user has favourited. They are displayed similar to the homepage. Recipes that have been favourited by other users... these will NOT be displayed.
-
-<img src="static/images/faves-display.png" width="800px">
-<img src="static/images/faves-display2.png" width="800px">
-
-
-- When clicking Drafts on navbar, the user is redirected to the drafts page. This renders only the recipes written by the user, who's status is draft. They are displayed similar to the homepage. Other users drafts will NOT be displayed here. 
-
-<img src="static/images/drafts-display.png" width="800px">
-<img src="static/images/drafts-display2.png" width="800px">
 
 * * *
 
@@ -1212,14 +1120,20 @@ DJANGO ADMINISTRATOR
 
 ###### BUGS & FIXES: 
 
-UNABLE TO SIGN IN/SIGN UP FROM MOBILE DEVICE:
+
+1. UNABLE TO SIGN IN/SIGN UP FROM MOBILE DEVICE:
 I couldn;t figure out why this was. After speaking to Code Institute tutors, they explained it's a common issue with Apple devices. To resolve it:
-1. Go to settings in safari
-2. Privacy and security 
-3. Disable'Prevent Cross-Site Tracking' 
+    1. Go to settings in safari
+    2. Privacy and security 
+    3. Disable'Prevent Cross-Site Tracking' 
 
+2. SESSION SIGNING OUT WHEN TESTING LIKE/UNLIKE BUTTON
 
+When testing whether certain users can like/unlike, I noticed that when signing in and then going to my url/posts/1 my session would sign out automatically. I realised this was due to being on Incognito-mode on my browser.
 
+3. THREE DOTS NOT DISPLAYING IN TOP CORNER OF POST
+
+In users posts, the  dropdown menu. MoreDropdown.js was not rendering. This was due to postPage not being passed down to my Post.js Ger from Code institute helped me resolve this issue!
 * * * 
 
 #### Unresolved bug 
@@ -1595,13 +1509,12 @@ CREDITS:
 
 This project was extremely challengin for me. I used several resources to get me to the finish line, as well as the help of tutors, my mentor and fellow students at Code Institute.
 
-* I used the "I think therefore I blog" walk through project as a starting point and template. As per this walktrhiugh projects, I created a blog like page that stored recipes. I used some snippets of code as reference, and nbuilt upon it with more features. (Such as favourites view, create recipe view, edit and delete, and drafts view).
-* Oisin (tutor) in Code Institute helped me troubleshoot some issues I was having with my cloudinary images not loading onto my site. 
-* Alan (tutor) in Code Institute helped me troubleshoot some issues I was having with fontawesome icons. Thanks!
-* Sean (tutor) at Code Instutute helped me troubleshoot an error I was getting when connecting my urls for creating a recipe.
-* Matt (a former Code Instutute student) helped me toroubleshoot an issue I was having with displaying summernotes from the front end, and my cloudinary image not updating wehen editing my form. Thank you Matt!!!
-* Chris (my mentor) helped me plan out the project and supported me every step of the way.
-* Codemy.com --> I followed a few tutorials to get ideas as how to create/edit/delete my recipe blog posts. https://www.youtube.com/watch?v=J7xaESAddDQ
+* I used the "Moments" walk through project as a starting point and template. As per this walkthrough projects, I created a blog like page that stored images. I used some snippets of code as reference, and built upon it with more features. (Such as favourites view, most popular posts and some delete functions).
+* Code Institute Tutors we always so helpful! Ed, Oisin, Alan, Ger and Tom! They helped me troubleshoot most of the issue's displayed in my bugs section. Thank you!!
+
+
+
+
 
 
        
