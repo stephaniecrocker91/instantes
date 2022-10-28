@@ -1014,12 +1014,12 @@ All stylsheets were tested and this message was displayed for all test...
 NO ERRORS FOUND!
 <img src="src/assets/css-val.png" width="800px">
 
-#### [LIGHHOUSE TESTING]()
+#### LIGHHOUSE TESTING
 
 Many pages were tested and here are some examples of the results found...
 
 
-The lower performance is due to the images being too heavy. I would like to reduce the image sizes of image uploads- so as to run more efficiently. I will work on this post-submission
+The lower performance is due to the images being too heavy. I would like to reduce the image sizes of image uploads- so as to run more efficiently. I will work on this post-submission!
 
 <img src="src/assets/lighthouse.png" width="800px">
 
@@ -1386,211 +1386,82 @@ Yes - as a logged in user, I can do this at any time. Simply click on profile, t
 
 * * *
 
+## COMPONENTS:
+
+* * *
+
+Several components have been implemented within this project that have been reused throughout the project:
+
+1. Assets.js
+2. Avatar.js
+3. Likes.js
+4. MoreDropdown.js
+5. NavBar.js
+6. NotFound.js
+7. SmallPost.js
+
+* * *
+
 ## DEPLOYMENT:
 
 * * *
 
-### Forking The GitHub Repository
+### The site was deployed to Heroku using the following steps....
 
 * * *
 
-You can Fork the Repository. This makes a copy of the original repository on our Github account so you can make changes without affecting the original repository.
-1. Log into GitHub and locate the GitHub repository you want.
-2. Click on the "Fork" button which is located in the top right corner.
-3. You will now have a copy of the original repository in your GitHub account.
+1. Launch the gitpod workspace.
+2. Install ReactJS:
 
-* * * 
+npx create-react-app . --use-npm
+npm start
 
-### Cloning the Project.
+3. Install the packages using the command npm install:
+
+react-bootstrap@1.6.3 bootstrap@4.6.0
+react-router-dom@5.3.0
+axios
+react-infinite-scroll-component
+msw --save-dev
+jwt-decode
+-g eslint
+
+4. Git add, commit, and push changes to gitpod.
+5. Create the project app on Heroku, and link the GitHub repository by navigating to the 'Deploy' tab.
+
 * * *
-1. Log into GitHub and locate the GitHub repository you want.
-2. Under the repository name, click "Code" button which will come up with a dropdown menu.
-3. Where it says Clone, copy the link below.
-
-* * * 
 
 
-### SETTING UP DJANGO PROJECT & DEPLOYMENT
+### Connecting to the API:
 
 * * *
-#### SETTING UP THE DJANGO PROJECT...
 
-_In GITHUB:_
 
- Once the repository has been created using the Code Institute student template....
+1. Go to the Heroku app of the project DRF-API, and under the Settings tab, added the config vars (making sure trailing slash at the end has been removed on both):
 
-1. Install Django and supporting libraries. 
-    * Django and gunicorn --> pip3 install 'django<4' gunicorn
-    * Supporting libraries --> pip3 install dj_database_url psycopg2
-    * Cloudinary libraries --> pip3 install dj3-cloudinary-storage
+Key: CLIENT_ORIGIN | Value: Heroku app link
+Key: CLIENT_ORIGIN_DEV | Value: Gitpod link
 
-2. Create a requirements file --> pip3 freeze --local > requirements.txt
+2. Install the Axios package, and create supporting axiosDefaults.js as shown in the Moments Walkthrough.
 
-3. Create your project: in this case for-the-love-of-food
+* * *
 
-4. Create an app using command --> python3 manage.py startapp APP_NAME
 
-5. Add it to installed apps --> INSTALLED_APPS = [
-    …
-    'APP_NAME',
-]
+### Deploying to Heroku:
 
-6. Save file and migrate changes using command --> python3 manage.py migrate
+* * *
 
-7. Run server to test
+1. In scripts section of package.json in gitpod, add command:
 
-8. Commit and push changes to github
+"heroku-prebuild": "npm install -g serve",
 
-#### DEPLOYING THE APP TO HEROKU...
+2. Add Procfile to project root and populate with:
 
-1. Create Heroku Account
-2. In Heroku dashboard: go to Create new app.
-3. Give your app a unique name.
-4. Select region --> EUROPE
-5. Click create App.
-6. Go to Database App/Resources/ Add-ons and search and click 'Heroku Postgres'.
-7. Go to the Settings tab, scroll down to Config Vars and select Reveal Config Vars and copy text.
+web: serve -s build
 
+3. Git add/commit/push
 
-_IN GITPOD..._
-
-
-8. Create env.py file on top of level directory.
-9. Import os library
-10. set environment variables --> os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
-11. Add in a secret key --> os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
-
-
-_IN HEROKU ..._
-
-
-12. Add secret Key to config vars --> SECRET_KEY, “randomSecretKey”
-
-
-_IN GITPOD / IN SETTINGS.PY_
-
-
-13. Reference env.py file -->
-import os
-import dj_database_url
-
-if os.path.isfile("env.py"):
-   import env
-
-14. Remove the secret key and replace it with the following variable--> SECRET_KEY = os.environ.get('SECRET_KEY')
-
-
-15. Comment out the DataBases section -->
- DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
-     }
- }
-
- 16. Add new database section -->
- DATABASES = {
-   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
-
-17. In the terminal, save files and make migrations --> python3 manage.py migrate
-
-
-_GETTING STATIC AND MEDIA FILES STORED ON CLOUDINARY..._
-
-
-18. Create a cloudinary account, and copy the CLOUDINARY_URL from the dashboard.
-
-19. Add url to env.py -->
-os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
-
-
-_BACK IN HEROKU ..._
-
-
-20. Paste Cloudinary URL to Heroku Config Vars -->
-Add to Settings tab in Config Vars e.g. COUDINARY_URL, cloudinary://************************
-
-21. In config vars, add DISABLE_COLLECTSTATIC, 1. This will be rmeoved before final deployment.
-
-
-_IN GITPOD / SETTINGS.PY_
-
-
-22. Install Cloudinary libraries -->
-INSTALLED_APPS = [
-    …,
-    'cloudinary_storage',
-    'cloudinary',
-    …,
-]
-
-23. Tell Django to use Cloudinary to store media and static files -->
-STATIC_URL = '/static/'
-
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-23. Link file to templates -->
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-24. Change template directory to templates array -->
-TEMPLATES = [
-    {
-        …,
-        'DIRS': [TEMPLATES_DIR],
-       …,
-            ],
-        },
-    },
-]
-
-25. Add heroku hostname to ALLOWED_HOSTS-->
-ALLOWED_HOSTS = ["PROJ_NAME.herokuapp.com", "localhost"]
-
-
-_IN GITPOD..._
-
-
-26. Create 3 new folders: media, static and templates
-
-27. Create procfile and add code -->
-web: gunicorn PROJ_NAME.wsgi
-
-28. In terminal --> Add, Commit and Push
-
-_IN HEROKU ..._
-
-29. Deploy manually -->  Github as deployment method, on main branch
-
-
-
-#### FINAL PRODUCTION DEPLOYMENT..
-
-_IN GITPOD / SETTINGS.PY_
-
-1. Set DEBUG flag to False!! If not...
-    * Django will serve the static  files such as css files itself, instead of relying on Cloudinary.
-    * Django will continue to give us verbose error pages which can reveal credentials, and things you want to keeo secret. This will compromise your site!
-2. Add a few more settings--> X_FRAME_OPTIONS = 'SAMEORIGIN'
-    * Without this our summer note editor would no  longer work when we deploy the project. This is due to Cross-Origin Resource Sharing, which tells the browser which resources are permitted to be loaded.
-3. Save, add and commit as "deployment commit", and push to github.
-
-
-_IN HEROKU..._
-
-
-4. In reveal config vars, remove DISABLE_COLLECTSTATIC environment variable.
-
-5. Go to deploy tab, scroll down to the end and deplopy our branch! 
-
-6. Your app has been deployed to heroku!
-
-
+4. Deploy via deploy button in Heroku
 
 ### Forking The GitHub Repository
 
