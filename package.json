@@ -2,7 +2,7 @@
   "node": "16.x"
   }
 
-{
+,{
   "name": "moments",
   "version": "0.1.0",
   "private": true,
