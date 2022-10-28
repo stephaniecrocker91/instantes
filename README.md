@@ -362,6 +362,7 @@ When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, 
     * Cancel button 
     
     <img src="src/assets/editpassword.png" width="500px">
+    
  
 
 
@@ -369,56 +370,66 @@ When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, 
 
 -----------
 
+
+### THE CODE:
+
+* * *
+Prior to commencing to write my code out, I planned out the ERD.
+
+<img src="src/assets/erd-map.png" width="1000px">
+
+You can find a link to a more in depth database Backend ReadMe [HERE](https://github.com/stephaniecrocker91/djangorestframework-api/blob/main/README.md).
+
+
+* * * 
+
+## SURFACE:
+
+* * *
+
 ### WIREFRAMES:
 
 
 * * * 
 
-## THE CODE:
-
-* * *
-Prior to commencing to write my code out, I planned out the ERD.
-
-<img src="./static/images/diagram.png" width="1000px">
-
-You can find a link to a more in depth database Backend ReadMe HERE.
-
-The User Model ---> Django default User Model. We will use user (PK), Email and Password.
-
-Recipe Model --> Is our main model. It contains all the required fields for our recipe: recipe_id(PK), title, category(FK), slug, author(FK-User), created_on, image, ingredients, directions, likes, favourites, status and user. 
+My initiall wireframes for mobile and desktop view. The end result was very similar to this!
 
 
-Categories Model --> Containing the categories_id(PK), category field.
+HOME LANDING PAGE: (Which will be exat same layoud for: Home, Feed, Likes, Bookmarks. Only difference will be the posts they display.)
 
-Comments Model --> Containing, comment_id(PK), User(FK), recipe_id, body, created_on.
+Logged in vs Logged out
 
-Favourites Model --> Contains favourtites_id, recipe_id, user, likes.
+<img src="src/assets/home-m.png" width="200px">
+<img src="src/assets/home-lo.png" width="400px">
+<img src="src/assets/home-li.png" width="400px">
 
+PROFILE PAGE:
 
-IMPORTANT RELATIONSHIPS BETWEEN TABLES:
-* One to many relationship between the User and the Recipe model.
-* One to many relationship between the User and the Favouries model.
-* One to many relationship between the User and the Comments model.
-* One to many relartionships between Category and Recipe's.
-* One to many relationships between Recipe and Comments model.
+<img src="src/assets/profile-m.png" width="200px">
+<img src="src/assets/profile-d.png" width="400px">
+
+CREATE POST PAGE:
+
+<img src="src/assets/createpost-m.png" width="200px">
+<img src="src/assets/createpost-d.png" width="400px">
+
+EDIT POST PAGE:
+
+<img src="src/assets/editpost-m.png" width="200px">
+<img src="src/assets/editpost-d.png" width="400px">
+
+EDIT PROFILE PAGE:
+
+<img src="src/assets/editprofile-m.png" width="200px">
+<img src="src/assets/editprofile-d.png" width="400px">
+
+UPDATE DETAILS FORMS (change password, username, etc):
+
+<img src="src/assets/update-m.png" width="200px">
+<img src="src/assets/update-d.png" width="400px">
 
 
 * * * 
-
-## SURFACE
-
-* * *
-
-* My initial wireframes...
-
-<img src="./static/images/wireframe.png" width="500px">
-<img src="./static/images/wireframe2.png" width="500px">
-<img src="./static/images/wireframe7.png" width="500px">
-<img src="./static/images/wireframe4.png" width="500px">
-<img src="./static/images/wireframe5.png" width="500px">
-<img src="./static/images/wireframe6.png" width="500px">
-
-
 * * *
 
 ### Colors
@@ -1136,6 +1147,22 @@ When testing whether certain users can like/unlike, I noticed that when signing 
 3. THREE DOTS NOT DISPLAYING IN TOP CORNER OF POST
 
 In users posts, the  dropdown menu. MoreDropdown.js was not rendering. This was due to postPage not being passed down to my Post.js Ger from Code institute helped me resolve this issue!
+
+4. DEPLOYMENT FAILING:
+
+ Apparetly Heroku has updated the stack recently, and it's causing a few deployment version-related issues. It kept coming up with th following error.
+
+<img src="static/images/bug.png" width="800px">
+
+
+ This was resolved by adding the following to my package.json
+ {
+"engines": {
+"node": "16.x"
+},
+"name": etc..
+
+
 * * * 
 
 #### Unresolved bug 
@@ -1143,11 +1170,12 @@ In users posts, the  dropdown menu. MoreDropdown.js was not rendering. This was 
 * * * 
 
 * The would like to find a solution to the mobile device Sign In/Sign Out bug.
-* The like/unike button in the Most liked posts is still not fully functioning. With a bit more time, I positive I will be able to make this work.
+* The like/unike button in the Most liked posts is still not fully functioning. With a bit more time, I am positive I will be able to make this work.
 
 <img src="static/images/category-error.png" width="1000px">
 <img src="static/images/category.png" width="8000px">
 
+* When bookmarking/liking a post - the DOm doesnt refresh automatially in other components (for example: most liked posts, or if I have my likes feed open and I like a most liked post it doesn't appear immediately). It required refreshing the page for it to display. I would like to fix this issue!
 
 
 * * * 
