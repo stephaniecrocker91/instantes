@@ -214,6 +214,59 @@ Logged in
 Logged out
 <img src="src/assets/comments.png" width="500px">
   
+
+* * * 
+
+### Add Post Page
+
+* * *
+
+When logged in user clicks on Add Post in the NavBar, the user can view...
+
+* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* Create Post Form including the following fields:
+    * Image user can click on to upload image.
+    * Title input field
+    * Description field
+    * Create button
+    * Cancel button
+
+
+<img src="src/assets/addpost.png" width="500px">
+
+* * * 
+
+### Edit Post Page
+
+* * *
+
+When logged in user clicks on three dots above their own post, the user can view...
+
+* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* Create Post Form including the following fields with default content:
+    * Image user can click on button below to upload new image.
+    * Title input field
+    * Description field
+    * Save button
+    * Cancel button
+
+
+<img src="src/assets/editpost.png" width="500px">
+
+* * * 
+
+### Liked Page 
+
+* * *
+
+When clicking liked, the user can view all their liked posts. The layout of the page is the same as the home page and the feed page. Only difference is this will display the users liked posts only!
+
+
+
+<img src="src/assets/liked.png" width="500px">
+
+* * * 
+
 ### Bookmarks Page 
 
 * * *
@@ -256,44 +309,7 @@ When logged in user clicks on Profile in the NavBar, the user can view...
 <img src="src/assets/profile.png" width="500px">
 <img src="src/assets/threedots.png" width="500px">
 
-
-### Add Post Page
-
-* * *
-
-When logged in user clicks on Add Post in the NavBar, the user can view...
-
-* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
-* Create Post Form including the following fields:
-    * Image user can click on to upload image.
-    * Title input field
-    * Description field
-    * Create button
-    * Cancel button
-
-
-<img src="src/assets/addpost.png" width="500px">
-
-
-
-
-
-### Edit Post Page
-
-* * *
-
-When logged in user clicks on three dots above their own post, the user can view...
-
-* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
-* Create Post Form including the following fields with default content:
-    * Image user can click on button below to upload new image.
-    * Title input field
-    * Description field
-    * Save button
-    * Cancel button
-
-
-<img src="src/assets/editpost.png" width="500px">
+* * * 
   
 ### Edit Profile Page
 
@@ -436,8 +452,8 @@ Hexedecimal icon for the search bar.
 
 A couple images for our Sign In and Sign Up pages: create the mood of the site. I purposefully picked images that go with the color scheme of the site: dark, deep, masculine colors.
 
-<img src="src/assets/image1.png" width="500px">
-<img src="src/assets/image2.png" width="500px">
+<img src="src/assets/sign-in.png" width="500px">
+<img src="src/assets/sign-up.png" width="500px">
 
 
 
@@ -455,20 +471,31 @@ FEATURES:
 
 *   LANDING PAGE: Without logging in....
     * Navbar: Header title "Instantes", Home, Sign In and SignUp links (containing font awesome icons).
+    <img src="src/assets/navbar2.png" width="500px">
     * Posts rendered by all users
     * Search bar where you can search posts by relevant keyword.
+    <img src="src/assets/searchbar.png" width="500px">
     * List of most followed profiles
 
-<img src="src/assets/image1.png" width="500px">
-<img src="src/assets/image2.png" width="500px">
+    <img src="src/assets/popularprofiles.png" width="200px">
+    
+    And in mobile view....
+
+    <img src="src/assets/popularprofilesm.png" width="200px">
+
+    * List of most liked posts
+
+    <img src="src/assets/popularposts.png" width="200px">
+    
+    And in mobile view...
+
+    <img src="src/assets/popularpostsm.png" width="200px">
+
 
 *   LANDING PAGE: Once logged in....
     * Only difference is in the Navbar: App name, AddPost, Home, Feed, Liked, Favourite, Sign Out, and Profile link and avatar.
+    <img src="src/assets/navbar.png" width="500px">
 
-
-<img src="static/images/homescreen.png" width="500px">
-
-  
 
 
 * * * 
@@ -479,17 +506,33 @@ FEATURES:
 
 When user clicks a on Sign In link on navbar:
 
+<img src="src/assets/signin.png" width="500px">
+
+
 * NavBar displays: App title, Home, Sign In (is in larger font and underlined), and Sign Up link 
+
+    <img src="src/assets/navbar3.png" width="500px">
+
+
 * Sign In form containing the following:
     * Form title: Sign In.
     * Username
     * Password
     * Sign in Button
     * Link below to Sign Up (in case user has not created a profile yet!)
+
+    <img src="src/assets/signinform.png" width="500px">
+
+    <img src="src/assets/signuplink.png" width="500px">
+
+
+
 * Image by the form. This image disappears when using smaller mobile screens.
 
+    <img src="src/assets/signinm.png" width="500px">
 
-<img src="static/images/recipe-detail.png" width="500px">
+
+
 
 ### Sign Up Page 
 
@@ -497,7 +540,13 @@ When user clicks a on Sign In link on navbar:
 
 When user clicks a on Sign Up link on navbar:
 
+<img src="src/assets/signup.png" width="500px">
+
+
 * NavBar displays: App title, Home, Sign In, and Sign Up (is in larger font and underlined)link .
+
+<img src="src/assets/navbar4.png" width="500px">
+
 * Sign Up form containing the following:
     * Form title: Sign Up.
     * Username
@@ -505,10 +554,14 @@ When user clicks a on Sign Up link on navbar:
     * Confirm password
     * Sign Up Button
     * Link below to Sign Up (in case user already has an account!)
+
+<img src="src/assets/signupform.png" width="500px">
+
+
 * Image by the form. This image disappears when using smaller mobile screens.
 
+<img src="src/assets/signupm.png" width="500px">
 
-<img src="static/images/recipe-detail.png" width="500px">
 
 ### Feed Page 
 
@@ -516,8 +569,14 @@ When user clicks a on Sign Up link on navbar:
 
 When the logged in user clicks a on the Feed link on navbar:
 
-* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* NavBar displays with logged in icons as previous: Feed link differently styled so as to stand out.
+
+<img src="src/assets/navbar5.png" width="500px">
+
 * Search field.
+
+<img src="src/assets/searchbar.png" width="500px">
+
 * Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
     * Post author with avatar by it.
     * Date of post
@@ -525,42 +584,71 @@ When the logged in user clicks a on the Feed link on navbar:
     * Image title
     * Image description content
     * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
-* List of most followed users
 
+    <img src="src/assets/posts.png" width="500px">
 
-<img src="static/images/recipe-detail.png" width="500px">
+* List of most followed profiles
 
-### Feed Page 
+    <img src="src/assets/popularprofiles.png" width="200px">
+    
+    And in mobile view....
 
-* * *
+    <img src="src/assets/popularprofilesm.png" width="200px">
 
-When the logged in user clicks a on the Feed link on navbar:
+    * List of most liked posts
 
-* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
-* Search field.
-* Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
-    * Post author with avatar by it.
-    * Date of post
-    * Image
-    * Image title
-    * Image description content
-    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
-* List of most followed users
+    <img src="src/assets/popularposts.png" width="200px">
+    
+    And in mobile view...
 
+    <img src="src/assets/popularpostsm.png" width="200px">
 
-<img src="static/images/recipe-detail.png" width="500px">
 
 * * * 
   
-### Favourites Page 
+### Bookmarked Page 
 
 * * *
 
-When clicking favourites, the user can view all their favourite bookmarked posts. The layout of the page is the same as the home page and the feed page. Only difference is this will display the users favourite posts only!
+When the logged in user clicks a on the Bookmark link on navbar:
+
+* NavBar displays with logged in icons as previous: Feed link differently styled so as to stand out.
+
+<img src="src/assets/navbar6.png" width="500px">
+
+* Search field.
+
+<img src="src/assets/searchbar.png" width="500px">
+
+* Listed posts rendered below. Please note these are the posts of bookmarked posts only! Each post displays:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
+
+    <img src="src/assets/bookmarkedpost.png" width="500px">
+
+* List of most followed profiles
+
+    <img src="src/assets/popularprofiles.png" width="200px">
+    
+    And in mobile view....
+
+    <img src="src/assets/popularprofilesm.png" width="200px">
+
+    * List of most liked posts
+
+    <img src="src/assets/popularposts.png" width="200px">
+    
+    And in mobile view...
+
+    <img src="src/assets/popularpostsm.png" width="200px">
 
 
 
-<img src="static/images/favourite-recipes.png" width="500px">
+<img src="src/assets/bookmarked.png" width="200px">
 
 * * * 
 
