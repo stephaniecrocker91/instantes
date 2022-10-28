@@ -10,8 +10,11 @@ ABOUT THE WEBSITE:
 
 
 [DEPLOYED API HEROKU LINK](https://instantes-drf-api.herokuapp.com/)
+
 [DEPLOYED FRONTEND HEROKU LINK - LIVE SITE](https://instantes-react.herokuapp.com/)
+
 [DEPLOYED BACKEND GITHUB REPOSITORY](https://github.com/stephaniecrocker91/djangorestframework-api)
+
 
 
 _Instantes_ is a public online blog-styled media platford where users can create a profile and post their images along with a title and content. Users can also view other users profiles, comment, like and favourite them! This interactive platform is designed to provide a a rich online community as users interact with each others posts.
@@ -1043,31 +1046,6 @@ Testing this site manually was a long and very detailed process. No obvious erro
 
 * * *
 
-
-HOMEPAGE:
-
-* * *
-
-- Loads properly. No errors or broken links.
-
-<img src="static/images/homescreen.png" width="800px">
-
-
-
-* * *
-
-SIGNUP:
-
-* * *
-
-- Signup cannot be submitted without enterring username or password. Email is optional!
-<img src="static/images/inputfield1.png" width="800px">
-<img src="static/images/inputfield2.png" width="800px">
-<img src="static/images/inputfield3.png" width="800px">
-
-
-* * *
-
 HOMEPAGE...
 
 * * *
@@ -1203,6 +1181,18 @@ DELETE POST PAGE - CRUD FUNCTIONALITY
 - Users cannot access this feature without logging in!
 - Users cannot delete any post that does not belong to them! 
 - No warning is displayed before deleting the post. I would lie to add a step prior to this: "Are you sure you wish to delete this post?"
+
+
+* * *
+
+SEARCH FEATURE
+
+* * *
+
+- When clicking on Search Input field (which is displayed in Home, Feed, Liked, Bookmarks), the user is able to search using a keyword. The keyword looks at the title and content of the posts and correctly displays the matching posts below.
+- It will only search from the posts rendered in that particular page. So  - for example, if we serach for Stephie's posts in our Feed, but we dont follow stephie... we will not see these posts. 
+- The search feature waits a couple of seconds before retrieving the matching posts - so as to not do multiple requests. 
+- If no matches are found - the No results are displayed. 
 
 
 * * *
