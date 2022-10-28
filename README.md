@@ -931,6 +931,8 @@ When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, 
 * Most popular posts: allow the like button to be functional (like/unlike), and when clicking the post it will redirect you to the post withing theuse profile. This will allow to see the rets of their work if interested!
 * Infinite scroll for profiles box
 * Auto-refresh DOM when liking/bookamrking etc. At the moment we have to refresh the page for changes to display.
+* I would like to add a message before deleting a post: "Are you sure you wish to delete this post?" This will prevent any accidental deletes.
+* I would like to add the option to delete a profile. Again - ensure there are safety measured before confirming deletion!
 
 
 * * * 
@@ -1037,7 +1039,7 @@ NO ERRORS FOUND!
 
 * * * 
 
-Testing this site manually was a long and very detailed process. No errors were found.
+Testing this site manually was a long and very detailed process. No obvious errors were found (except for the obvious).
 
 * * *
 
@@ -1066,66 +1068,150 @@ SIGNUP:
 
 * * *
 
-LOGIN...
+HOMEPAGE...
 
 * * *
 
--  User cannot login withourt compleying the form correctly. Username and password (both case sensitive).
-
-<img src="static/images/login-field.png" width="800px">
-
-* * *
-
-FROM LOGGED IN USER ...
-
-* * *
-
-- When clicking on any recipe (oncelogged in), we are directed to the recipe_detail.html. User can view all the details, amount of likes, favourites and comments. They can view the comments. Here they have the ability to:
+-  Logged in and logged out user can view the feed: posts displaying and top posts and profiles being displayed.
+- Logged in user can view full navbar/ and logged out user can view sign in/signup icons.
+- Asset spinner loads while posts are being fetched. This occurs in all pages where posts or profiles are being loaded.
+- Posts render correctly in order of latest post and the infinate scrolling is working as should. This includes ALL posts!
 
 
 * * *
 
-DELETE
+WHEN SIGNING UP ...
+
+- When attempting to submit the form without fields, using a non-unique username, or entering un-matching password, or unsafe password --> error alerts are displayed, and the form is not submitted.
+- Form is submitted when details entered are correct.
+- Manually tested and can confirm the API works. 
+- Once submitted the user is NOT logged in and is redirected to the Sign in page.
+
 
 * * *
 
-- When clicking Delete Recipe at the bottom of the edit_recipe.html, the user is redirected to the delete_recipe.html page. This is as a means of security. It asks for the user to confirm wether they are sure they want to delete this file.
+WHEN SIGNING IN ...
 
-<img src="static/images/delete-conf.png" width="800px">
-
-* * *
-
-LOG OUT
-
-* * *
-
-- When clicking on Logout (in our navbar), the link works correctly and re-directs us to the logout.html page. For security, this asks the user if they are sure they want to log out? If they click Logout, they are succesully redirected to the Homepage where limited features are displayed again.
-
-<img src="static/images/logout.png" width="800px">
+- Form is not submitted and user is not logged in until username and password match exitsing data in database.
+- Form cannot be submitted without password
+- Error alerts are displayed if password doesnt match or username is invalid.
+- Once signe din, user is directed back to Home page. This time the logged in icons are rendered.
+-User can move arounf between tabs and the session doesn't time out. User remains logged in until they decide to Sign Out.
 
 
-USER AUTHENTIFICATION PROTECTION
 
 * * *
 
-- Added code to ensure the correct user is logged in to access certain urls. If not verified, the following message appears
-
-
-<img src="static/images/private-delete.png" width="800px">
-
-* * * 
-
-DJANGO ADMINISTRATOR
+FEED
 
 * * *
 
-- From the backend, the administrator can create, edit and delete any Recipes, Comments, Categories. They can delete users. When making a change to any of these, the results are immediately visible in the front end of the site.
+- When clicking Feed, only posts belonging to Profiles the user follows are rendered. This has been extensively tested.
+- Post are rendered from most recent.
+- Infinite scrolling s fully functioning in this page.
+- The users posts are NOT displayed in this page.
+- When clicking follow/unfollow on one of the Most Followed Profiles on the side, the Feed does NOT automatically refresh. It requires the user to refresh the page. This is something I would like to improve post-submission.
 
-<img src="static/images/admin0.png" width="800px">
-<img src="static/images/admin.png" width="800px">
-<img src="static/images/admin2.png" width="800px">
-<img src="static/images/admin3.png" width="800px">
-<img src="static/images/admin4.png" width="800px">
+* * *
+
+LIKED PAGES
+
+* * *
+
+- When clicking Likes or Bookmarks, only posts belonging liked by the user are rendered.
+- Post are rendered from most recent.
+- Infinite scrolling s fully functioning in this page.
+- The users posts are NOT displayed in this page.
+- When clicking like/unlike on one of the Most Liked Posts on the side, the Liked feed does NOT automatically refresh. It requires the user to refresh the page. This is something I would also like to improve post-submission.
+
+* * *
+
+BOOKMARKED PAGES
+
+* * *
+
+- When clicking Bookmarks, only posts bookmarked by the user are rendered. 
+- Post are rendered from most recent.
+- Infinite scrolling s fully functioning in this page.
+- The users posts are NOT displayed in this page.
+
+
+
+* * *
+
+PROFILE
+
+* * *
+
+- When clicking Profile Avatar or Username, the user is redirected to the Profile page. 
+- Profile details are correctly displayed including: avatar, username, posts, followers and following. This has been manually checked extensively!
+- Infinite scrolling s fully functioning in this page- all posts displayed by the user are loading correctly.
+- Again - if clicking on any of the posts like button (displayed on Most Liked posts liked buttons on the side) - the DOM does not automatically update the likes count. However once refreshing the page, this is correctly displayed!
+- User can delete or edit any of their posts. This has been manually tested from the back and front end. Both delete and edit functions work as intended.
+
+
+
+* * *
+
+PROFILE EDITING FEATURES
+
+* * *
+
+- When clicking thre three dots in the top corner of Profile, the user can choose to edit profile, change username, or change password. All 3 links lead to the correct forms.
+- Edit profile allows the user to update their Bio and create an avatar (by uplaoding thei image). The data is correctly stored and the user is correctly redirected to their Profile. The new information is displayed.
+- Change username allows the user to update their username which will be saved as new owner and login credentials. The data is correctly stored and the user is correctly redirected to their Profile. If they wanted to sign in again, they would need to use the new username. The old one will no longer work.
+- Same here: Change password allows the user to update their passowrd which will be saved as new password and login credentials. The data is correctly stored and the user is correctly redirected to their Profile. If they wanted to sign in again, they would need to use the new password. The old one will no longer work.
+
+
+* * *
+
+CREATE POST PAGE - CRUD FUNCTIONALITY
+
+* * *
+
+- When clicking Create Post, the logged in user is correctly directed to the Create Post Form page which provides the Create functionality: from the CRUD.
+- This option is not possible without logging in.
+- Form cannot be submitted without at least a title and an image. Content is optional.
+- The image must be under 2MB
+- Alert messages are displayed if the requirements are not met, and the form cannot be submitted.
+- Users cannot access this feature without logging in!
+
+
+* * *
+
+EDIT POST PAGE - CRUD FUNCTIONALITY
+
+* * *
+
+- When clicking on the three dots in any post and edit symbol (only owned by logged in user), the logged in user is correctly directed to the Edit Post Form page which provides the Edit functionality: from the CRUD.
+- Default post content is displayed.
+- Post can be edited or request can be cancelled.
+- New image still must be under 2MB
+- Again - form cannot be submitted without at least a title and an image. Content is optional. Alert messages will be displayed in these cases.
+- Users cannot access this feature without logging in!
+- Users cannot edit or delete any post that does not belong to them! 
+
+
+* * *
+
+DELETE POST PAGE - CRUD FUNCTIONALITY
+
+* * *
+
+- When clicking on the three dots in any post and delete symbol (only owned by logged in user), the logged in user is correctly directed to the Edit Post Form page which provides the Delete functionality: from the CRUD.
+- This option is not possible without logging in or owning this post.
+- Users cannot access this feature without logging in!
+- Users cannot delete any post that does not belong to them! 
+- No warning is displayed before deleting the post. I would lie to add a step prior to this: "Are you sure you wish to delete this post?"
+
+
+* * *
+
+SIGN OUT
+
+* * *
+
+- When clicking on Sign Out (in our navbar), the link works correctly and re-directs us to the original Home Page displaying the logged out navbar links. User will need to log back in if they wish to access their profile.
 
 
 * * * 
@@ -1193,7 +1279,6 @@ Yes - the navbar is displayed clearly across all pages and on all screens. When 
 
 Yes - as a user I can navigate eaisly without having to refresh the page. The only thing I haven't been able to resolve, is the instant update of feed when bookmarking or liking. It required refreshing the DOM to fully display all new data.
 
-%^&*()*&^%$*(*&^%$^&*)
 
 3. Authentication - Sign up: As a user I can create a profile so that I can access all the features available for signed up users.
 
@@ -1259,13 +1344,36 @@ Yes - users (logged-in and logged-out) can view posts by scrolling down, withoiu
 
 The Post Page
 1. Post page: As a user I can view individual posts page so that I can read the post comments.
+
+Yes - users can view all posts inividually and see what the comments are. Only logged in users can comment.
+
 2. Edit post: As a post owner I can edit my post title, content and image so that I can correct or change my post once created.
+
+Yes - only post owners have CRUD functionality of their posts- at any time.
+
 3. Create a comment: As a logged in user I can comment a post so that I can express my opinions it and interact with people.
+
+Yes - all logged in users can comment on any post at any time.
+
 4. Comment date: As a user I can see how long ago a comment was made so that I know when this was written.
+
+Yes - all users can view how long ago the post was published.
+
 5. View comments: As a user I can view post comments so that I can see what others think about this post.
+
+Yes - all users can view comment posted by other users.
+
 6. Delete comments: As the owner of a comment I can delete my comment so that I have control over my discussions in the forum.
+
+Yes - comment owners are able to delete their comment at any time!
+
 7. Edit a comment: As the owner of a comment I can edit my comment so that I update it if wanted.
+
+Yes - comment oweners are able to edit their comment at any time!
+
 8. Most popular posts: As a user I can see a list of the most liked posts so that I can see which ones are the most popular ones.
+
+Yes - all users can view the post popular posts (displayed below Most Followed Profiles). They can view this logged in our out.
 
 The Profile Page
 1. Profile page: As a user I can view other users profiles so that I can view their content and potentially intercat with them.
