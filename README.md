@@ -79,9 +79,6 @@ The Profile Page
 7. Update username and password: As a logged in user I can update my username and password so that I can change my display name whenever I like and always keep my profile safe.
 
 
-
-
-
 * * * 
 
 
@@ -1243,53 +1240,118 @@ I couldn;t figure out why this was. After speaking to Code Institute tutors, the
 
 * * * 
 
-1. As a Site User I can view a paginated list of posts so that easily select a post to view.
+NAVIGATION & AUTHENTICATION
+1. Navigation: As a user I can view the navbar from every page so that I can navigate between pages  easily.
 
-The recipes are easily visbale and viewable in a paginated list which allows for 3 recipes one by another.
+Yes - the navbar is displayed clearly across all pages and on all screens. When on mobile devices, the dropdown menu button is clear and the dropdown icons are easily accessible.
 
-2. As a Site User I can register an account so that I can View, post, comment, favourite and like recipes.
+2. Routing: As a user I can navigate through pages quickly and easily so that I can view the content without having to refresh the page.
 
-Yes - the user can create their own account by clicking on Register (on the navbar), and entering name, email (optional) and password (which must be confirmed twice). They can then View all recipes. They can post their own recipes, comment on any recipe, and like and favourite any recipe.
+Yes - as a user I can navigate eaisly without having to refresh the page. The only thing I haven't been able to resolve, is the instant update of feed when bookmarking or liking. It required refreshing the DOM to fully display all new data.
 
-3. As a Site User I can click on a recipe post so that I can view its content.
+%^&*()*&^%$*(*&^%$^&*)
 
-Yes - if the user clicks on the recipe post (wether they have an account or not), the will be able to view the details on this recipe. This includes: title, author, date and time of post, category, inredient, preparation, image. They can also view: amount of like, amount of comments, amount of favourites, and the actual comements posted below. Please note: they will not be able to actually comment on the post.
+3. Authentication - Sign up: As a user I can create a profile so that I can access all the features available for signed up users.
 
-4. As a Site User I can click the like button on a recipe so that I can like/unlike recipes.
+Yes - users can create their own profile and access all features.
 
-Yes - if the site user (who is verified and logged in only) clicks on the fontawesome heart icon, this will automatical create a like on the post. This will increase the amount of likes displayed, and link this user to this post (one to many).
+4. Authentication - Sign in: As a user I can sign in to the app so that I can access all the functionality available for logged in users.
 
-5. As a Site User I can comment on a recipe so that I can interact with the content and other site users.
+Yes - users can then sign in to the app to access all functionality available for logged in users.
 
-Yes - the site user (who is verified and logged in only) can comment on any recipe post. The comment will be displayed below... it will go from old to new.
+5. Authentication - Logged in Status: As a user can easily tell if I am logged in or not.
 
-6. As a Site User I can favourite a recipe so that collect recipes to easily view them on my _Favourites Page_ when needed to.
+Yes - the navbar clearly displays wether the user is logged in or not. When logged in, the user has extra features and can view their own avatar and username.
 
-Yes - if the site user (who is verified and logged in only) clicks on the fontawesome bookmark icon, this will automatical create a favourite tag on the post. This will increase the amount of favourites displayed, and link this user to this post (one to many). This will allow allow this recipe to be displayed in the favourites html page. This favourites tab is a tab that is only visible to authenticated and logged in users. It serves as a qay to quickly access their fave posts - improving the users experience.
+6. Authentication - Refreshing access tokens: As a user I am able to remain logged in until I decide to log-out so that my experience as a user is enjoyable.
 
-7. As a Admin User I can create a recipe template so that site users can post their recipes easily.
+Yes - users can remain logged in until they log out.
 
-Yes - as an Admin user I created a template that serves as purpose to create a draft of the recipe. It requires the folllowing fields ot be input: title, category, user (pre-filled as its linked to the user logged in), ingredients, method, image (we have a placeholder in place, so this is not required), status (draft of published).
+7. Navigation: Conditional rendering - As a logged out user I can clearly see sign in and sign up options so that I can easily sign in or sign up if I want to.
 
-8. As a Admin User I can Create, Read, Update and Delete recipes so that I can manage the sites content.
+Yes - the navbar and conditional rendering of navbar icons allows the user to easily know wether they are logged in or not. If logged out: sign in and sign up options are available. if logged in, all features available in navbar.
 
-Yes - I can log in as an admin superuser and create my own recipes from ther backend. I can also read, update and delete any recipe.
+8. Avatar: As a user I can view user's  images so that I can easily identify each user.
 
-9. As a Admin/Site User I can view a list of recipes so that I can browse and select one to read.
+Yes - users can view the profiles avatar. This would be the images the user selected, or the default avatar.
 
-Yes - as a siteuser/admin I can view all the recipes displayed on my homescreen. They are visible wether I am authenticated and logged in or not. They are clearly displayed, and it is easy for me to click onto nay of them to read the full details. 
+ADDING, LIKING AND BOOKMARKING POSTS:
+9. Create posts: As a logged in user I can create posts so that I can share my images with anyone who has access to this app.
 
-10. As a Admin/Site User I can view the number of likes, favourites and comments so that I can track the recipe's popularity.
+Yes - logged in users can create their own posts, as many as they like!
 
-Yes - as admin/site user I can view the amount of likes, favourites, and comments. This is visible wether I am logged in or not.
+10. View a post: As a user I can view the details of a post so that I can know more about it.
 
-11. As a Admin User I can create, read, update and delete recipes so that I can manage the blog content.
+Yes - all users can view all details about every post: likes, bookmarks, comments, title, content, image, owner.
 
-If I were logged in as a an admin superuser, I can manage every single post. I can create, delete edit any post.  
+11. Like a post: As a logged in user I can manually like a post so that I can show the comunity what I like.
 
-12. As a user I can click on the favourites so I can view my list of favourite recipes.
+Yes - logged in users can like a post by clicking on the heart icon below the post!
 
-Once logged in/verified only, I can click on the favourites tab and view all my favourite posts displayed as a list.
+12. Bookmark a post: As a logged in user I can manually bookmark a post so that I can save what I like what I like.
+
+Yes - logged in users can bookmark a post by clicking on the bookmark icon below the post!
+
+THE POSTS PAGE:
+1. View most recent posts: As a user I can view posts ordered by most recently created first, so that I don't miss any new content.
+
+Yes - users can view all posts, and they are ordered by most recent.
+
+2. As a user, I can search for posts using keywords, so that I can find the content I am most interested in.
+
+Yes - users can input a searchword and the related posts will pop up. if not posts match the keyword, then "No matches found" message will appear.
+
+3. View bookmarked posts: As a logged in user save posts I liked so that I can easily view them again and again!
+
+Yes - logged in users will be able to view all bookmarked posts under the bookmarks tab.
+
+4. View posts of followed users: As a logged in user I can follow users so I can filter the content I view and keep up with their posting.
+
+Yes - logged in users may view the posts of their followed profiles, when clicking on FEED.
+
+5. Infinite scroll: As a user I can infinately scroll through posts, so that I don't have to click on "next page" etc
+
+Yes - users (logged-in and logged-out) can view posts by scrolling down, withoiut having to refresh or change the page.
+
+The Post Page
+1. Post page: As a user I can view individual posts page so that I can read the post comments.
+2. Edit post: As a post owner I can edit my post title, content and image so that I can correct or change my post once created.
+3. Create a comment: As a logged in user I can comment a post so that I can express my opinions it and interact with people.
+4. Comment date: As a user I can see how long ago a comment was made so that I know when this was written.
+5. View comments: As a user I can view post comments so that I can see what others think about this post.
+6. Delete comments: As the owner of a comment I can delete my comment so that I have control over my discussions in the forum.
+7. Edit a comment: As the owner of a comment I can edit my comment so that I update it if wanted.
+8. Most popular posts: As a user I can see a list of the most liked posts so that I can see which ones are the most popular ones.
+
+The Profile Page
+1. Profile page: As a user I can view other users profiles so that I can view their content and potentially intercat with them.
+
+Yes - users can easily view other peoples profiles by clicking on the user avatar. 
+
+2. Most followed profiles: As a user I can see a list of the most followed profiles so that I can see which ones are the most popular ones.
+
+Yes - users (logged in and logged out) can view most followed profiles eaisly. This is displayed on most feed/content pages.
+
+3. User profile - user stats: As a user I can view the stats about a user including bio, number of posts, follows, bookmarks and users followed so that I can know more about the profile.
+
+Yes - users can eaisly view other people and their own stats. This is displayed in the user profile- and is visible to logged in and logged out users.
+
+4. Follow/Unfollow a user: As a logged in user I can follow or unfollow users so that I can filter the posts I want in my feed.
+
+Yes - all logged in users can choose to follow/unfollow another profile at any time. This is easily done by clicking the follow/unfollow button.
+
+5. View all posts by a specific user: As a user I can view all the posts created by one specific user so that I can view their content and see if I would like to follow them or not.
+
+Yes - as user I can view another users content eaisly by clicking on their profile. This displays their stats, as well as all of their posts!
+
+6. Edit profile: As a logged in user I can edit my profile so that I can update and change it when I like, to best express myself.
+
+Yes - as a logged in user, I can eaisly update my profile as I please. I can update: username, password, bio and avatar.
+
+7. Update username and password: As a logged in user I can update my username and password so that I can change my display name whenever I like and always keep my profile safe.
+
+Yes - as a logged in user, I can do this at any time. Simply click on profile, three dots, and update username or update password.
+
 
 * * *
 
