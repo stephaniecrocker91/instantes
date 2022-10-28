@@ -44,12 +44,12 @@ const PopularPosts = (props) => {
                     <p className={appStyles.SubTitle}>Most liked posts</p>
                         {mobile ? (
                             <div className="d-flex justify-content-around">
-                            {popularPosts.results.slice(0,3).map((post) => (
+                            {popularPosts.results.slice(0,1).map((post) => (
                                 <PostMini key={post.id} post={post} mobile />
                         ))}
                         </div>
                         ):(
-                            popularPosts.results.map((post) => (
+                            popularPosts.results.slice(0,3).map((post) => (
                                 <PostMini key={post.id} post={post} setPosts={setPosts}/>
                         ))
                     )}

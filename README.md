@@ -988,50 +988,35 @@ For testing I used the following sources:
 
 * * *
 
-#### [Pep8](http://pep8online.com/)
-
-Tested and no errors found.
-
-urls.py
-<img src="static/images/test-pep8.png" width="800px">
-forms.py
-<img src="static/images/test-pep8-2.png" width="800px">
-admin.py
-<img src="static/images/test-pep8-3.png" width="800px">
-apps.py
-<img src="static/images/test-pep8-4.png" width="800px">
-views.py
-<img src="static/images/test-pep8-5.png" width="800px">
-models.py
-<img src="static/images/test-pep8-6.png" width="800px">
-tests.py
-<img src="static/images/test-pep8-9.png" width="800px">
-asgi.py
-<img src="static/images/test-pep8-10.png" width="800px">
-settings.py
-<img src="static/images/test-pep8-11.png" width="800px">
-A couple of long lines, but I am unable to make them any shorter.
-urls.py
-<img src="static/images/test-pep8-12.png" width="800px">
-wsgi.py
-<img src="static/images/test-pep8-13.png" width="800px">
-
-#### [HTML VALIDATOR](https://validator.w3.org/)
-
-Tested and no errors found!
-<img src="static/images/test-html.png" width="800px">
-This was easily solved by changing my alt value to -Image of recipe.
-
 
 #### [CSS VALIDATOR](https://jigsaw.w3.org/css-validator/)
 
-style.css
-NO ERRORS FOUND!
-<img src="static/images/style-css.png" width="800px">
+All stylsheets were tested and this message was displayed for all test...
 
-summernote.css
 NO ERRORS FOUND!
-<img src="static/images/style-css2.png" width="800px">
+<img src="src/assets/css-val.png" width="800px">
+
+
+#### [HTML VALIDATOR](https://validator.w3.org/)
+
+Tested on index.html page and a few erros found. Mostly warning: "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. "
+
+<img src="src/assets/html-val.png" width="800px">
+
+
+This was solved by 
+
+
+#### [ES LINT](https://eslint.org/)
+
+All stylsheets were tested and this message was displayed for all test...
+
+NO ERRORS FOUND!
+    <img src="src/assets/css-val.png" width="800px">
+
+#### [LIGHHOUSE TESTING]()
+
+Many pages were tested and here are some examples of the results found...
 
 
 
