@@ -8,8 +8,10 @@ ABOUT THE WEBSITE:
 
 * * * 
 
-[Link to deployed site](https://for-the-love-of-food1.herokuapp.com/)
 
+[DEPLOYED API HEROKU LINK](https://instantes-drf-api.herokuapp.com/)
+[DEPLOYED FRONTEND HEROKU LINK - LIVE SITE](https://instantes-react.herokuapp.com/)
+[DEPLOYED BACKEND GITHUB REPOSITORY](https://github.com/stephaniecrocker91/djangorestframework-api)
 
 
 _Instantes_ is a public online blog-styled media platford where users can create a profile and post their images along with a title and content. Users can also view other users profiles, comment, like and favourite them! This interactive platform is designed to provide a a rich online community as users interact with each others posts.
