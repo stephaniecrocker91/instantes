@@ -999,9 +999,15 @@ NO ERRORS FOUND!
 
 #### [HTML VALIDATOR](https://validator.w3.org/)
 
-Tested on index.html page and a few erros found. Mostly warning: "Trailing slash on void elements has no effect and interacts badly with unquoted attribute values. "
+Tested on index.html page.
+
+Document checking completed. No errors or warnings to show.
+Used the HTML parser. Externally specified character encoding was utf-8.
+Total execution time 375 milliseconds.
 
 <img src="src/assets/html-val.png" width="800px">
+
+
 
 
 This was solved by 
