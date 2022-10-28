@@ -1483,10 +1483,6 @@ You can Fork the Repository. This makes a copy of the original repository on our
 * * * 
 
 
-[Link to deployed site](https://for-the-love-of-food1.herokuapp.com/)
-
-* * *
-
 
 CREDITS: 
 --------
@@ -1499,6 +1495,7 @@ This project was extremely challengin for me. I used several resources to get me
 
 * I used the "Moments" walk through project as a starting point and template. As per this walkthrough projects, I created a blog like page that stored images. I used some snippets of code as reference, and built upon it with more features. (Such as favourites view, most popular posts and some delete functions).
 * Code Institute Tutors we always so helpful! Ed, Oisin, Alan, Ger and Tom! They helped me troubleshoot most of the issue's displayed in my bugs section. Thank you!!
+* My fellow students at Code Institute also helped through slack channels. 
 
 
 
