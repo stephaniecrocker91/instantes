@@ -14,9 +14,8 @@ ABOUT THE WEBSITE:
 
 _Instantes_ is a public online blog-styled media platford where users can create a profile and post their images along with a title and content. Users can also view other users profiles, comment, like and favourite them! This interactive platform is designed to provide a a rich online community as users interact with each others posts.
 
-<img src="static/images/am-i-responsive.png" width="500px">
-
-<img src="static/images/homescreen.png" width="500px">
+<img src="src/assets/amiresponsive.png" width="500px">
+<img src="src/assets/home.png" width="500px">
 
 * * * 
 
@@ -47,10 +46,11 @@ Navigation & Authentication
 7. Navigation: Conditional rendering - As a logged out user I can clearly see sign in and sign up options so that I can easily sign in or sign up if I want to.
 8. Avatar: As a user I can view user's  images so that I can easily identify each user.
 
-Adding & Liking Posts
+Adding, Liking and bookmarking Posts
 9. Create posts: As a logged in user I can create posts so that I can share my images with anyone who has access to this app.
 10. View a post: As a user I can view the details of a post so that I can know more about it.
 11. Like a post: As a logged in user I can manually like a post so that I can show the comunity what I like.
+12. Bookmark a post: As a logged in user I can manually bookmark a post so that I can save what I like what I like.
 
 The Posts Page
 1. View most recent posts: As a user I can posts ordered by most recently created first, so that I don't miss any new content.
@@ -67,6 +67,7 @@ The Post Page
 5. View comments: As a user I can view post comments so that I can see what others think about this post.
 6. Delete comments: As the owner of a comment I can delete my comment so that I have control over my discussions in the forum.
 7. Edit a comment: As the owner of a comment I can edit my comment so that I update it if wanted.
+8. Most popular posts: As a user I can see a list of the most liked posts so that I can see which ones are the most popular ones.
 
 The Profile Page
 1. Profile page: As a user I can view other users profiles so that I can view their content and potentially intercat with them.
@@ -114,16 +115,14 @@ STRUCTURE:
     * Posts rendered by all users
     * Search bar where you can search posts by relevant keyword.
     * List of most followed profiles
+    * List of most liked posts
 *   LANDING PAGE: Once logged in....
     * Only difference is in the Navbar: App name, AddPost, Home, Feed, Liked, Favourite, Sign Out, and Profile link and avatar.
 
 
 
 
-<img src="static/images/homescreen.png" width="500px">
-
-  
-
+<img src="src/assets/home.png" width="500px">
 
 * * * 
 
@@ -133,7 +132,7 @@ STRUCTURE:
 
 When user clicks a on Sign In link on navbar:
 
-* NavBar displays: App title, Home, Sign In (is in larger font and underlined), and Sign Up link 
+* NavBar displays: App title, Home, Sign In (is styled differently to stand out.), and Sign Up link 
 * Sign In form containing the following:
     * Form title: Sign In.
     * Username
@@ -143,7 +142,7 @@ When user clicks a on Sign In link on navbar:
 * Image by the form. This image disappears when using smaller mobile screens.
 
 
-<img src="static/images/recipe-detail.png" width="500px">
+<img src="src/assets/signin.png" width="500px">
 
 ### Sign Up Page 
 
@@ -151,7 +150,7 @@ When user clicks a on Sign In link on navbar:
 
 When user clicks a on Sign Up link on navbar:
 
-* NavBar displays: App title, Home, Sign In, and Sign Up (is in larger font and underlined)link .
+* NavBar displays: App title, Home, Sign In, and Sign Up (is styled differently to stand out.)link .
 * Sign Up form containing the following:
     * Form title: Sign Up.
     * Username
@@ -162,7 +161,7 @@ When user clicks a on Sign Up link on navbar:
 * Image by the form. This image disappears when using smaller mobile screens.
 
 
-<img src="static/images/recipe-detail.png" width="500px">
+<img src="src/assets/signup.png" width="500px">
 
 ### Feed Page 
 
@@ -170,7 +169,7 @@ When user clicks a on Sign Up link on navbar:
 
 When the logged in user clicks a on the Feed link on navbar:
 
-* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
+* NavBar displays with logged in icons as previous: Feed link is styled differently to stand out.
 * Search field.
 * Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
     * Post author with avatar by it.
@@ -180,41 +179,50 @@ When the logged in user clicks a on the Feed link on navbar:
     * Image description content
     * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
 * List of most followed users
+* List of most liked posts
 
 
-<img src="static/images/recipe-detail.png" width="500px">
+<img src="src/assets/feed.png" width="500px">
 
-### Feed Page 
-
-* * *
-
-When the logged in user clicks a on the Feed link on navbar:
-
-* NavBar displays with logged in icons as previous: Feed link is in larger font and underlined.
-* Search field.
-* Listed posts rendered below. Please note these are the posts of followed user only! Each post displays:
-    * Post author with avatar by it.
-    * Date of post
-    * Image
-    * Image title
-    * Image description content
-    * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
-* List of most followed users
-
-
-<img src="static/images/recipe-detail.png" width="500px">
 
 * * * 
-  
-### Favourites Page 
+
+### Individual Post Page
 
 * * *
 
-When clicking favourites, the user can view all their favourite bookmarked posts. The layout of the page is the same as the home page and the feed page. Only difference is this will display the users favourite posts only!
+When user clicks on any Post, the user can view the individual post page which contains...
+
+* NavBar displays with logged in icons/logged out icons. 
+* individual post which displays:
+    * Post author with avatar by it.
+    * Date of post
+    * Image
+    * Image title
+    * Image description content
+    * Links: Like button and count, Bookmark button and count, and Comment fontawesome icon and count
+    * Comment sections (if user is logged in they have the option to comment. If they are not, they can only view the comments.)
+* List of most followed users
+* List of most liked posts
+
+
+<img src="src/assets/post.png" width="500px">
+
+Logged in
+<img src="src/assets/comments2.png" width="500px">
+
+Logged out
+<img src="src/assets/comments.png" width="500px">
+  
+### Bookmarks Page 
+
+* * *
+
+When clicking bookmarks, the user can view all their favourite bookmarked posts. The layout of the page is the same as the home page and the feed page. Only difference is this will display the users bookmarked posts only!
 
 
 
-<img src="static/images/favourite-recipes.png" width="500px">
+<img src="src/assets/bookmarked.png" width="500px">
 
 * * * 
 
@@ -232,7 +240,7 @@ When logged in user clicks on Profile in the NavBar, the user can view...
     * Posts Count
     * Followers Count
     * Following Count
-    * 3 dots dropdown with option to edit profile, change username, change password, and delete profile????????!!!!!!!!!!!!!%$&*&^£@)
+    * 3 dots dropdown with option to edit profile, change username, change password (and in future delete profile).
 * Listed posts of logged in user rendered below. Each post displays the usual:
     * Post author with avatar by it.
     * Date of post
@@ -242,10 +250,12 @@ When logged in user clicks on Profile in the NavBar, the user can view...
     * Links: Like button and count, Bookmark button and count, and Comment fontaweson icon and count
     * An extra 3 dot dropdown menu to edit or delete the post.
 * List of most followed users
+* List of most liked posts
 
 
-<img src="static/images/create-recipe.png" width="500px">
-<img src="static/images/create-recipe2.png" width="500px">
+<img src="src/assets/profile.png" width="500px">
+<img src="src/assets/threedots.png" width="500px">
+
 
 ### Add Post Page
 
@@ -262,8 +272,28 @@ When logged in user clicks on Add Post in the NavBar, the user can view...
     * Cancel button
 
 
-<img src="static/images/create-recipe.png" width="500px">
-<img src="static/images/create-recipe2.png" width="500px">
+<img src="src/assets/addpost.png" width="500px">
+
+
+
+
+
+### Edit Post Page
+
+* * *
+
+When logged in user clicks on three dots above their own post, the user can view...
+
+* NavBar displays with logged in icons as previous. Create Post link is larger and underlined.
+* Create Post Form including the following fields with default content:
+    * Image user can click on button below to upload new image.
+    * Title input field
+    * Description field
+    * Save button
+    * Cancel button
+
+
+<img src="src/assets/editpost.png" width="500px">
   
 ### Edit Profile Page
 
@@ -278,10 +308,11 @@ When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, 
     * Bio text input field
     * Save button
     * Cancel button
+    * In future: delete post!
+* List of most followed users
+* List of most liked posts
 
-
-<img src="static/images/create-recipe.png" width="500px">
-<img src="static/images/create-recipe2.png" width="500px">
+<img src="src/assets/threedots.png" width="500px">
   
 
 
@@ -349,10 +380,11 @@ IMPORTANT RELATIONSHIPS BETWEEN TABLES:
 * When initially planning this site, I knew I wanted more of a masculine style calling for a deep, rich colour scheme. 
 * This would allow for the images to really pop in the app.
 
-<img src="./static/images/color1.png" width="800px">
-<img src="./static/images/color2.png" width="800px">
-<img src="./static/images/color3.png" width="800px">
-<img src="./static/images/color4.png" width="800px">
+<img src="src/assets/color2.png" width="200px">
+<img src="src/assets/color1.png" width="200px">
+<img src="src/assets/color3.png" width="200px">
+<img src="src/assets/color4.png" width="200px">
+<img src="src/assets/color5.png" width="200px">
 
 
 
@@ -602,8 +634,10 @@ When logged in user clicks on the edit icon in 3 dots dropdown in Profile Page, 
 
 ### Future features
 
-* Prepopulated author of recipe = authenticated user name. This prevents the user to be able to use someone else's name as author. 
-* When creating recipe, the user can either input the category or sleect one from the dropdown menu. At the moment the user is limited to selecting from a limited amount.
+* Allow for videos to be posted, as well as images.
+* Most popular posts: allow the like button to be functional (like/unlike), and when clicking the post it will redirect you to the post withing theuse profile. This will allow to see the rets of their work if interested!
+* Infinite scroll for profiles box
+* Auto-refresh DOM when liking/bookamrking etc. At the moment we have to refresh the page for changes to display.
 
 
 * * * 
@@ -898,7 +932,11 @@ DJANGO ADMINISTRATOR
 
 ###### BUGS & FIXES: 
 
-Go to settings in safari, under privacy and security , there is a button 'Prevent Cross-Site Tracking' disable this and try and log in!!!
+UNABLE TO SIGN IN/SIGN UP FROM MOBILE DEVICE:
+I couldn;t figure out why this was. After speaking to Code Institute tutors, they explained it's a common issue with Apple devices. To resolve it:
+1. Go to settings in safari
+2. Privacy and security 
+3. Disable'Prevent Cross-Site Tracking' 
 
 
 
@@ -908,9 +946,8 @@ Go to settings in safari, under privacy and security , there is a button 'Preven
 
 * * * 
 
-I would like to resolve the following issue. 
-
-* When creating recipe, the user can only select an option from a dropdown meny that has been preset. They cannot add their own category (in the case that they needed to). Currently I can only add categories froom the back end. 
+* The would like to find a solution to the mobile device Sign In/Sign Out bug.
+* The like/unike button in the Most liked posts is still not fully functioning. With a bit more time, I positive I will be able to make this work.
 
 <img src="static/images/category-error.png" width="1000px">
 <img src="static/images/category.png" width="8000px">
