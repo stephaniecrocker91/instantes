@@ -3,7 +3,6 @@ import { useCurrentUser } from "../../context/CurrentUserContext";
 import styles from "../../styles/ProfilePost.module.css";
 import SmallPost from '../../components/SmallPost';
 import { Link } from 'react-router-dom';
-import Post from './Post';
 import postStyles from "../../styles/Post.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
 
@@ -11,10 +10,9 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 const PostMini = (props) => {
     const { post, mobile, imageSize = 55, setPosts } = props;
-    const { id, image, title, owner, like_id, likes_count } = post;
+    const { id, image, title, like_id, likes_count } = post;
 
     const currentUser = useCurrentUser();
-    const is_owner = currentUser?.username === owner;
 
 
     const handleLike = async () => {
@@ -29,7 +27,7 @@ const PostMini = (props) => {
                 }),
             }));
             } catch (err) {
-            console.log(err);
+            // console.log(err);
             }
         };
 
@@ -45,7 +43,7 @@ const PostMini = (props) => {
                 }),
             }));
             } catch (err) {
-            console.log(err);
+            // console.log(err);
             }
         };
 

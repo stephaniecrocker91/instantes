@@ -1002,23 +1002,16 @@ NO ERRORS FOUND!
 Tested on index.html page.
 
 Document checking completed. No errors or warnings to show.
-Used the HTML parser. Externally specified character encoding was utf-8.
-Total execution time 375 milliseconds.
 
 <img src="src/assets/html-val.png" width="800px">
 
 
-
-
-This was solved by 
-
-
 #### [ES LINT](https://eslint.org/)
 
-All stylsheets were tested and this message was displayed for all test...
+All pages were tested and this message was displayed for all test...
 
 NO ERRORS FOUND!
-<img src="src/assets/css-val.png" width="800px">
+
 
 #### LIGHHOUSE TESTING
 

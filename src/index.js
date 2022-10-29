@@ -9,7 +9,6 @@ import { ProfileDataProvider } from "./context/ProfileDataContext";
 
 
 ReactDOM.render (
-    // <React.StrictMode>
         <Router>
             <CurrentUserProvider>
                 <ProfileDataProvider>
@@ -17,7 +16,6 @@ ReactDOM.render (
                 </ProfileDataProvider>
             </CurrentUserProvider>
         </Router>,
-    // </React.StrictMode>,
     document.getElementById('root')
 );
 

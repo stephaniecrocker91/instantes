@@ -51,7 +51,7 @@ function ProfilePage() {
                 setProfilePosts(profilePosts);
                 setHasLoaded(true);
             } catch (err) {
-                console.log(err);
+                // console.log(err);
             }
             };
             fetchData();
@@ -141,7 +141,6 @@ function ProfilePage() {
             <PopularProfiles mobile />
             <PopularPosts mobile />
             <Container className={appStyles.ContentLight}>
-            {/* <Container className={appStyles.Content}> */}
             {hasLoaded ? (
                 <>
                 {mainProfile}

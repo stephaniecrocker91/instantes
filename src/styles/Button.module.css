@@ -35,13 +35,15 @@
     }
 
 .Orange {
-    background-color: #ff9254;;
+    color: rgb(7, 7, 7);
+    background-color: whitesmoke;;
 }
 
 .Orange:hover {
         opacity: 0.8;
-        background-color: #dc8350;
+        background-color: rgb(231, 223, 223);
         border-color: transparent;
+        color: black;
         cursor: pointer;
     }
 

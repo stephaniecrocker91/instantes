@@ -9,7 +9,6 @@ import { Form, Button, Image, Col, Row, Container, Alert } from "react-bootstrap
 
 import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
-import Asset from "../../components/Asset";
 import SignUp from "../../assets/sign-up.png";
 
 const SignUpForm = () => {
