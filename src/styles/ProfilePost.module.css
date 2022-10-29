@@ -1,3 +1,13 @@
 .WordBreak {
     word-break: break-all;
 }
+
+.Condense {
+    font-size: smaller;
+    letter-spacing: 1px;
+}
+
+.Condense span {
+    text-transform: uppercase;
+}
+

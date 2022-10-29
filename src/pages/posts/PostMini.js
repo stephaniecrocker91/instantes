@@ -10,7 +10,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 const PostMini = (props) => {
     const { post, mobile, imageSize = 55, setPosts } = props;
-    const { id, image, title, like_id, likes_count } = post;
+    const { id, image, owner, like_id, likes_count } = post;
 
     const currentUser = useCurrentUser();
 
@@ -56,9 +56,9 @@ const PostMini = (props) => {
                 <SmallPost src={image} height={imageSize} className={styles.SmallPost}/>
             </Link>
             </div>
-            <div className={`mx-2 ${styles.WordBreak}`}>
-                <p><em>{title}</em></p>
-                {/* <p>by:<em>{owner}</em></p>  */}
+            <div className={`mx-2 ${styles.WordBreak} ${styles.Condense}`}>
+                {/* <p><em>{title}</em></p> */}
+                <p><em>Created by: </em><span><strong>{owner}</strong></span></p> 
             </div>
             <div className={`text-right ${!mobile && "ml-auto"}`}>
                 {!mobile &&
