@@ -1006,14 +1006,20 @@ Document checking completed. No errors or warnings to show.
 <img src="src/assets/html-val.png" width="800px">
 
 
-#### [ES LINT](https://eslint.org/)
+#### [JS HINT](https://jshint.com/)
 
-All pages were tested and this message was displayed for all test...
+The workspace was contsantantly monitored for any npm or js errors, and leaned up as I went along. The final build, displays no errors:
+
+<img src="src/assets/npm.png" width="800px">
+
+When putting the pages through ES Lint, no errors, just warnings for example.
+
+This is all good to go!
 
 NO ERRORS FOUND!
 
 
-#### LIGHHOUSE TESTING
+#### LIGHTHOUSE TESTING
 
 Many pages were tested and here are some examples of the results found...
 
