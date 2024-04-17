@@ -70,7 +70,7 @@ function ProfilePage() {
                     </Col>
                     <Col lg={6}>
                         <h3 className={`m-2 ${appStyles.Header}`}>{profile?.owner}</h3>
-                        <Row className="justify-content-center no-gutters">
+                        <Row className={`${styles.ProfileData} justify-content-center no-gutters`}>
                             <Col xs={3} className="my-2">
                                 <div>{profile?.posts_count}</div>
                                 <div>posts</div>

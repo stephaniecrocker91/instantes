@@ -1,18 +1,20 @@
+body{
+    background-color: black;
+}
 .App {
     font-family: "Poppins", sans-serif;
     /* min-height: 100vh; */
     color: #4d4d4d;
-    background-color: whitesmoke;
     }
 
 .Main {
-    margin-top: 20vh;
+    margin-top: 220px;
 }
 
 .Content {
     padding: 20px;
     border-radius: 20px;
-    background-color:#2c2b2b;
+    background-color:#2c2b2b87;
     text-align: center;
     color: white;
     margin: 2rem;

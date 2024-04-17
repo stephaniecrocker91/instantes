@@ -45,7 +45,9 @@ const NavBar = () => {
                     activeClassName={styles.Active}
                     to="/feed"
                 >
+                    <span className={styles.NavLinkContent}>
                     <i className="fas fa-stream"></i>Feed
+                    </span>
                 </NavLink>
 
                 <NavLink
@@ -53,7 +55,9 @@ const NavBar = () => {
                     activeClassName={styles.Active}
                     to="/liked"
                 >
+                    <span className={styles.NavLinkContent}>
                     <i className="fas fa-heart"></i>Liked
+                    </span>
                 </NavLink>
 
                 <NavLink
@@ -61,11 +65,15 @@ const NavBar = () => {
                     activeClassName={styles.Active}
                     to="/bookmarked"
                 >
+                    <span className={styles.NavLinkContent}>
                     <i className="fas fa-bookmark"></i>Bookmarks
+                    </span>
                 </NavLink>
 
                 <NavLink className={styles.NavLink} onClick={handleSignOut} to="/" >
+                <span className={styles.NavLinkContent}>
                     <i className="fas fa-sign-out-alt"></i>Sign Out
+                    </span>
                 </NavLink>
                 <NavLink
                     className={styles.NavLink}
@@ -83,14 +91,18 @@ const NavBar = () => {
                 className={styles.NavLink} 
                 activeClassName={styles.Active}
                 >
+                    <span className={styles.NavLinkContent}>
                     <i className="fas fa-arrow-right"></i>Sign In
+                    </span>
                 </NavLink>
                 <NavLink 
                 to="/signup" 
                 className={styles.NavLink} 
                 activeClassName={styles.Active}
                 >
+                    <span className={styles.NavLinkContent}>
                     <i className="fas fa-feather"></i>Sign Up
+                    </span>
                 </NavLink>
             </>
         );
@@ -102,7 +114,7 @@ const NavBar = () => {
                 <Row>
                     <Col>
                     <NavLink to="/">
-                        <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
+                        <Navbar.Brand className={styles.Brand}><span className={styles.In}>In</span>stantes</Navbar.Brand>
                     </NavLink>
                     </Col>
                 </Row>  
@@ -113,14 +125,16 @@ const NavBar = () => {
                     onClick={() => setExpanded(!expanded)}
                     aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ml-auto text-center">
+                        <Nav className={`${styles.NavIconBox} ml-auto text-center`}>
                             <NavLink 
                                 exact
                                 to="/" 
                                 className={styles.NavLink} 
                                 activeClassName={styles.Active}
                                 >
+                                <span className={styles.NavLinkContent}>
                                 <i className="fas fa-home"></i>Home
+                                </span>
                             </NavLink>
                             {currentUser ? loggedInIcons : loggedOutIcons}
                         </Nav>
