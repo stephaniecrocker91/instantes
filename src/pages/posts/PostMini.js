@@ -58,7 +58,7 @@ const PostMini = (props) => {
             </div>
             <div className={`mx-2 ${styles.WordBreak} ${styles.Condense}`}>
                 {/* <p><em>{title}</em></p> */}
-                <p><em>Created by: </em><span><strong>{owner}</strong></span></p> 
+                <p><em>By: </em><span><strong>{owner}</strong></span></p> 
             </div>
             <div className={`text-right ${!mobile && "ml-auto"}`}>
                 {!mobile &&

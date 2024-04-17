@@ -8,7 +8,7 @@
     margin-right: 30px!important;
 }
 .Red {
-    background: linear-gradient(to right, red, rgb(246 96 184));
+    background: linear-gradient(to right, red 5%, rgb(246 96 184));
     -webkit-background-clip: text; /* For Safari */
     background-clip: text;
     color: transparent;
@@ -18,14 +18,15 @@
     color: #b43a24;
     }
 
-.IconOutline:hover {
-    color: rgb(246 96 184);
+.IconOutline:hover,
+.Comments:hover {
+    background: linear-gradient(to right, red 5%, rgb(246 96 184));
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
     }
 
 .Comments{
     color: white;
 }
 
-.Comments:hover {
-    color:rgb(246 96 184);
-}

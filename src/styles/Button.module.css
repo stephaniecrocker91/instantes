@@ -3,12 +3,16 @@
     align-self: center;
     border-radius: 10px;
     border-color: rgb(246 96 184);
-    background-color: rgb(246 96 184);
+    background-color: rgb(246 96 184 / 17%);
     margin: 0 5px;
     min-width: 75px;
     color: white;
     text-transform: uppercase;
     }
+
+.FullPink {
+    background-color: rgba(246, 96, 184, 0.882);
+}
 
 .Wide {
         padding: 10px 50px;
