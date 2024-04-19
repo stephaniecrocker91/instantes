@@ -17,7 +17,7 @@ import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../context/CurrentUserContext";
 import { useRedirect } from "../../hooks/useRedirect";
 import { setTokenTimestamp } from "../../utils/utils";
-import SignIn from "../../assets/sign-in.png";
+import SignIn from "../../assets/sign-up.png";
 
 function SignInForm() { 
 
@@ -56,13 +56,13 @@ return (
         <Col className={`my-auto p-0 p-md-2`} md={6}>
             <Container className={`${appStyles.Content} ${styles.Form} p-4 `}>
                 <h1 className={appStyles.Header}>Sign in</h1>
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={handleSubmit}
+                    className={styles.Input}>
                     <Form.Group controlId="username">
                         <Form.Label className="d-none">Username</Form.Label>
                         <Form.Control 
                             type="text" 
                             placeholder="username"
-                            className={styles.Input}
                             name="username"
                             value={username} 
                             onChange={handleChange} />

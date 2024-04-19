@@ -1,10 +1,18 @@
 .SearchBar input {
     border-radius: 20px;
-    border: 4px #242a3d solid ;
-    color: #242a3d;
+    border: 4px #171717 solid ;
+    color: #171717;
     padding-left: 40px;
     margin-bottom: 16px;
     padding: 20px;
     margin: 2rem;
     max-width: 90%;
+    background-color: black;
   }
+
+  .SearchBar input:focus {
+    background-color: black;
+    color: white;
+    border-color: rgba(246, 96, 184, 0.435)!important;
+  }
+

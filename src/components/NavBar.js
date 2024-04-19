@@ -114,7 +114,7 @@ const NavBar = () => {
                 <Row>
                     <Col>
                     <NavLink to="/">
-                        <Navbar.Brand className={styles.Brand}><span className={styles.In}>In</span>stantes</Navbar.Brand>
+                        <Navbar.Brand className={styles.Brand}>Instantes</Navbar.Brand>
                     </NavLink>
                     </Col>
                 </Row>  
