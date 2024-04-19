@@ -40,7 +40,7 @@ const PopularPosts = (props) => {
         >
             {popularPosts.results.length ? (
                 <>
-                    <p className={appStyles.SubTitle}>Most liked posts</p>
+                    <p className={appStyles.SubTitle}>Most liked</p>
                         {mobile ? (
                             <div className="d-flex justify-content-around">
                             {popularPosts.results.slice(0,1).map((post) => (

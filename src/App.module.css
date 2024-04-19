@@ -29,18 +29,17 @@ body{
     }
 
 .Header {
-    letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.7rem;
 }
 
 .SubTitle {
-    letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
     color: white;
+    letter-spacing: 2px;
 }
 
 .SubTitle:hover {
@@ -73,6 +72,8 @@ body{
 .Italics{
     font-style: italic;
 }
+
+
 
 
 
